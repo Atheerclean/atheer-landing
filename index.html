@@ -17,9 +17,7 @@ content="مؤسسة أثير للخدمات المنزلية - خدمات منز
 rel="stylesheet">
 
 
-<!-- ================================================= -->
-<!-- TIKTOK PIXEL -->
-<!-- ================================================= -->
+<!-- ================= TIKTOK PIXEL ================= -->
 
 <script>
 !function (w, d, t) {
@@ -56,8 +54,7 @@ rel="stylesheet">
   };
 
   ttq.load=function(e,n){
-    var r="https://analytics.tiktok.com/i18n/pixel/events.js",
-        o=n&&n.partner;
+    var r="https://analytics.tiktok.com/i18n/pixel/events.js";
 
     ttq._i=ttq._i||{};
     ttq._i[e]=[];
@@ -85,9 +82,7 @@ rel="stylesheet">
 
 <style>
 
-/* ================================================= */
-/* GENERAL */
-/* ================================================= */
+/* ================= GENERAL ================= */
 
 *{
   margin:0;
@@ -118,9 +113,7 @@ a{
 }
 
 
-/* ================================================= */
-/* NAVBAR */
-/* ================================================= */
+/* ================= NAVBAR ================= */
 
 nav{
   position:fixed;
@@ -191,9 +184,7 @@ nav{
 }
 
 
-/* ================================================= */
-/* HERO */
-/* ================================================= */
+/* ================= HERO ================= */
 
 .hero{
   padding:110px 10px 55px;
@@ -215,9 +206,7 @@ nav{
 }
 
 
-/* ================================================= */
-/* LOGO */
-/* ================================================= */
+/* ================= LOGO ================= */
 
 .hero-logo{
   width:105px;
@@ -236,9 +225,7 @@ nav{
 }
 
 
-/* ================================================= */
-/* OFFER BOX */
-/* ================================================= */
+/* ================= OFFER ================= */
 
 .offer-box{
   max-width:600px;
@@ -259,28 +246,20 @@ nav{
 
 .offer-title{
   color:#C9A227;
-
   font-size:21px;
-
   font-weight:800;
-
   line-height:1.5;
 }
 
 .offer-subtitle{
   color:#fff;
-
   font-size:14px;
-
   font-weight:700;
-
   margin-top:2px;
 }
 
 
-/* ================================================= */
-/* HERO DESCRIPTION */
-/* ================================================= */
+/* ================= HERO TEXT ================= */
 
 .hero p{
   max-width:650px;
@@ -293,9 +272,7 @@ nav{
 }
 
 
-/* ================================================= */
-/* BUTTONS */
-/* ================================================= */
+/* ================= BUTTONS ================= */
 
 .hero-buttons{
   display:flex;
@@ -335,7 +312,6 @@ nav{
 
 .btn-whatsapp{
   background:#25D366;
-
   color:#fff;
 
   box-shadow:
@@ -344,7 +320,6 @@ nav{
 
 .btn-call{
   background:#E53935;
-
   color:#fff;
 
   box-shadow:
@@ -352,42 +327,33 @@ nav{
 }
 
 
-/* ================================================= */
-/* SERVICES */
-/* ================================================= */
+/* ================= SERVICES ================= */
 
 .hero-services{
-  margin-top:35px;
+  margin-top:30px;
 }
 
 .services-title{
-  margin-bottom:15px;
+  margin-bottom:14px;
 }
 
 .services-title span{
   color:#C9A227;
-
   font-size:13px;
-
   font-weight:800;
 }
 
 .services-title h2{
-  font-size:26px;
-
+  font-size:25px;
   color:#102A43;
 }
 
 .services-title p{
-  color:#667085;
-
-  font-size:12px;
+  display:none;
 }
 
 
-/* ================================================= */
-/* SERVICE GRID */
-/* ================================================= */
+/* ================= SERVICE GRID ================= */
 
 .service-grid{
   display:grid;
@@ -395,27 +361,35 @@ nav{
   grid-template-columns:
     repeat(3,1fr);
 
-  gap:11px;
+  gap:10px;
 }
 
 
-/* ================================================= */
-/* SERVICE CARD */
-/* ================================================= */
+/* ================= SERVICE CARD ================= */
 
 .service{
-  background:#102A43;
+  background:#fff;
 
-  border:1px solid #183B5A;
+  border:1px solid #e5e7eb;
 
-  border-radius:13px;
+  border-radius:12px;
 
-  padding:18px 13px;
+  min-height:95px;
 
-  text-align:right;
+  padding:12px 6px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-align:center;
 
   box-shadow:
-    0 5px 18px rgba(16,42,67,.15);
+    0 3px 12px rgba(16,42,67,.07);
 
   transition:.25s;
 }
@@ -424,57 +398,58 @@ nav{
   transform:translateY(-3px);
 
   border-color:#C9A227;
+
+  box-shadow:
+    0 6px 18px rgba(16,42,67,.12);
 }
 
 
-/* SERVICE ICON */
+/* ================= SERVICE ICON ================= */
 
 .service-icon{
-  width:42px;
-  height:42px;
+  width:auto;
+  height:auto;
 
   display:flex;
 
   align-items:center;
   justify-content:center;
 
-  border-radius:10px;
+  background:transparent;
 
-  background:#C9A227;
+  border:none;
 
-  color:#fff;
+  color:#C9A227;
 
-  font-size:20px;
+  font-size:25px;
 
-  margin-bottom:8px;
+  margin-bottom:5px;
 }
 
 
-/* SERVICE TITLE */
+/* ================= SERVICE TITLE ================= */
 
 .service h3{
-  color:#fff;
+  color:#102A43;
 
-  font-size:14px;
+  font-size:11px;
 
-  margin-bottom:3px;
+  font-weight:700;
+
+  line-height:1.4;
+
+  margin:0;
 }
 
 
-/* SERVICE DESCRIPTION */
+/* إزالة وصف الخدمات */
 
 .service p{
-  color:#F1F5F9;
-
-  font-size:10px;
-
-  line-height:1.55;
+  display:none;
 }
 
 
-/* ================================================= */
-/* STATS */
-/* ================================================= */
+/* ================= STATS ================= */
 
 .stats{
   display:grid;
@@ -514,9 +489,7 @@ nav{
 }
 
 
-/* ================================================= */
-/* WHY US */
-/* ================================================= */
+/* ================= WHY US ================= */
 
 .why{
   padding:65px 0;
@@ -555,9 +528,7 @@ nav{
 }
 
 
-/* ================================================= */
-/* FEATURES */
-/* ================================================= */
+/* ================= FEATURES ================= */
 
 .features{
   display:grid;
@@ -599,9 +570,7 @@ nav{
 }
 
 
-/* ================================================= */
-/* RATING */
-/* ================================================= */
+/* ================= RATING ================= */
 
 .rating{
   text-align:center;
@@ -624,9 +593,7 @@ nav{
 }
 
 
-/* ================================================= */
-/* CTA */
-/* ================================================= */
+/* ================= CTA ================= */
 
 .cta{
   text-align:center;
@@ -653,9 +620,7 @@ nav{
 }
 
 
-/* ================================================= */
-/* FOOTER */
-/* ================================================= */
+/* ================= FOOTER ================= */
 
 footer{
   padding:27px 10px;
@@ -672,9 +637,7 @@ footer strong{
 }
 
 
-/* ================================================= */
-/* FLOATING WHATSAPP */
-/* ================================================= */
+/* ================= FLOATING WHATSAPP ================= */
 
 .floating-whatsapp{
 
@@ -712,9 +675,7 @@ footer strong{
 }
 
 
-/* ================================================= */
-/* FLOATING CALL */
-/* ================================================= */
+/* ================= FLOATING CALL ================= */
 
 .floating-call{
 
@@ -751,9 +712,7 @@ footer strong{
 }
 
 
-/* ================================================= */
-/* WHATSAPP ANIMATION */
-/* ================================================= */
+/* ================= WHATSAPP ANIMATION ================= */
 
 @keyframes whatsappPulse{
 
@@ -770,9 +729,7 @@ footer strong{
 }
 
 
-/* ================================================= */
-/* MOBILE */
-/* ================================================= */
+/* ================= MOBILE ================= */
 
 @media(max-width:850px){
 
@@ -782,7 +739,7 @@ footer strong{
 
   .service-grid{
     grid-template-columns:
-      repeat(2,1fr);
+      repeat(3,1fr);
   }
 
   .features{
@@ -819,7 +776,6 @@ footer strong{
   .nav-whatsapp,
   .nav-call{
     padding:6px 8px;
-
     font-size:10px;
   }
 
@@ -892,38 +848,29 @@ footer strong{
     font-size:22px;
   }
 
-  .services-title p{
-    font-size:10px;
-  }
-
   .service-grid{
     grid-template-columns:
-      repeat(2,1fr);
+      repeat(3,1fr);
 
-    gap:8px;
+    gap:7px;
   }
 
   .service{
-    padding:13px 8px;
+    min-height:82px;
+
+    padding:9px 4px;
 
     border-radius:10px;
   }
 
   .service-icon{
-    width:36px;
-    height:36px;
+    font-size:22px;
 
-    font-size:17px;
-
-    margin-bottom:6px;
+    margin-bottom:4px;
   }
 
   .service h3{
-    font-size:12px;
-  }
-
-  .service p{
-    font-size:9px;
+    font-size:10px;
   }
 
 
@@ -986,9 +933,7 @@ footer strong{
 <body>
 
 
-<!-- ================================================= -->
-<!-- NAVBAR -->
-<!-- ================================================= -->
+<!-- ================= NAVBAR ================= -->
 
 <nav>
 
@@ -1021,7 +966,6 @@ footer strong{
 
     <div class="nav-actions">
 
-
       <a
         href="https://wa.me/966565079362"
         target="_blank"
@@ -1043,7 +987,6 @@ footer strong{
 
       </a>
 
-
     </div>
 
   </div>
@@ -1051,10 +994,7 @@ footer strong{
 </nav>
 
 
-
-<!-- ================================================= -->
-<!-- HERO -->
-<!-- ================================================= -->
+<!-- ================= HERO ================= -->
 
 <header class="hero">
 
@@ -1070,13 +1010,11 @@ footer strong{
       xmlns="http://www.w3.org/2000/svg"
       aria-label="شعار أثير">
 
-
       <circle
         cx="100"
         cy="100"
         r="92"
         fill="#102A43"/>
-
 
       <circle
         cx="100"
@@ -1086,7 +1024,6 @@ footer strong{
         stroke="#C9A227"
         stroke-width="4"/>
 
-
       <path
         d="M55 96 L100 57 L145 96"
         fill="none"
@@ -1095,7 +1032,6 @@ footer strong{
         stroke-linecap="round"
         stroke-linejoin="round"/>
 
-
       <path
         d="M67 91 V139 H133 V91"
         fill="none"
@@ -1103,13 +1039,11 @@ footer strong{
         stroke-width="7"
         stroke-linejoin="round"/>
 
-
       <path
         d="M91 139 V111 H109 V139"
         fill="none"
         stroke="#C9A227"
         stroke-width="6"/>
-
 
       <text
         x="100"
@@ -1129,7 +1063,6 @@ footer strong{
   </div>
 
 
-
   <!-- OFFER -->
 
   <div class="offer-box">
@@ -1145,7 +1078,6 @@ footer strong{
   </div>
 
 
-
   <!-- DESCRIPTION -->
 
   <p>
@@ -1156,11 +1088,9 @@ footer strong{
   </p>
 
 
-
-  <!-- CONTACT BUTTONS -->
+  <!-- BUTTONS -->
 
   <div class="hero-buttons">
-
 
     <a
       href="https://wa.me/966565079362"
@@ -1186,10 +1116,7 @@ footer strong{
   </div>
 
 
-
-  <!-- ================================================= -->
-  <!-- SERVICES -->
-  <!-- ================================================= -->
+  <!-- ================= SERVICES ================= -->
 
   <div
     class="hero-services"
@@ -1206,18 +1133,11 @@ footer strong{
         كل ما يحتاجه منزلك
       </h2>
 
-      <p>
-        خدمات منزلية متكاملة بأيدي فريق متخصص
-      </p>
-
     </div>
-
 
 
     <div class="service-grid">
 
-
-      <!-- 1 -->
 
       <div class="service">
 
@@ -1229,15 +1149,8 @@ footer strong{
           تنظيف المكيفات
         </h3>
 
-        <p>
-          تنظيف المكيفات وتحسين كفاءة التبريد.
-        </p>
-
       </div>
 
-
-
-      <!-- 2 -->
 
       <div class="service">
 
@@ -1249,15 +1162,8 @@ footer strong{
           تنظيف المنازل والفلل
         </h3>
 
-        <p>
-          تنظيف شامل للمنازل والفلل باحترافية.
-        </p>
-
       </div>
 
-
-
-      <!-- 3 -->
 
       <div class="service">
 
@@ -1269,15 +1175,8 @@ footer strong{
           تنظيف الكنب والمجالس
         </h3>
 
-        <p>
-          تنظيف وإزالة البقع والأوساخ.
-        </p>
-
       </div>
 
-
-
-      <!-- 4 -->
 
       <div class="service">
 
@@ -1289,15 +1188,8 @@ footer strong{
           تنظيف السجاد
         </h3>
 
-        <p>
-          تنظيف السجاد بعناية واحترافية.
-        </p>
-
       </div>
 
-
-
-      <!-- 5 -->
 
       <div class="service">
 
@@ -1309,15 +1201,8 @@ footer strong{
           تنظيف الخزانات
         </h3>
 
-        <p>
-          تنظيف وتعقيم خزانات المياه.
-        </p>
-
       </div>
 
-
-
-      <!-- 6 -->
 
       <div class="service">
 
@@ -1329,10 +1214,6 @@ footer strong{
           مكافحة الحشرات
         </h3>
 
-        <p>
-          مكافحة الحشرات بطرق فعالة وآمنة.
-        </p>
-
       </div>
 
 
@@ -1341,8 +1222,7 @@ footer strong{
   </div>
 
 
-
-  <!-- STATS -->
+  <!-- ================= STATS ================= -->
 
   <div class="stats">
 
@@ -1394,15 +1274,11 @@ footer strong{
 </header>
 
 
-
-<!-- ================================================= -->
-<!-- WHY US -->
-<!-- ================================================= -->
+<!-- ================= WHY US ================= -->
 
 <section
   class="why"
   id="why">
-
 
 <div class="container">
 
@@ -1425,7 +1301,6 @@ footer strong{
   </div>
 
 
-
   <div class="features">
 
 
@@ -1446,7 +1321,6 @@ footer strong{
     </div>
 
 
-
     <div class="feature">
 
       <div class="feature-icon">
@@ -1464,7 +1338,6 @@ footer strong{
     </div>
 
 
-
     <div class="feature">
 
       <div class="feature-icon">
@@ -1480,7 +1353,6 @@ footer strong{
       </p>
 
     </div>
-
 
 
     <div class="feature">
@@ -1503,9 +1375,6 @@ footer strong{
   </div>
 
 
-
-  <!-- RATING -->
-
   <div class="rating">
 
     <div class="stars">
@@ -1524,28 +1393,21 @@ footer strong{
 </section>
 
 
-
-<!-- ================================================= -->
-<!-- CTA -->
-<!-- ================================================= -->
+<!-- ================= CTA ================= -->
 
 <section
   class="cta"
   id="contact">
 
-
 <div class="container">
-
 
   <h2>
     جاهزون لخدمتكم
   </h2>
 
-
   <p>
     تواصل معنا الآن واحجز خدمتك بسهولة.
   </p>
-
 
 
   <div class="hero-buttons">
@@ -1580,10 +1442,7 @@ footer strong{
 </section>
 
 
-
-<!-- ================================================= -->
-<!-- FOOTER -->
-<!-- ================================================= -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -1598,10 +1457,7 @@ footer strong{
 </footer>
 
 
-
-<!-- ================================================= -->
-<!-- FLOATING WHATSAPP -->
-<!-- ================================================= -->
+<!-- ================= FLOATING WHATSAPP ================= -->
 
 <a
   href="https://wa.me/966565079362"
@@ -1611,11 +1467,9 @@ footer strong{
   aria-label="واتساب"
   onclick="trackContact('Contact - Floating WhatsApp')">
 
-
   <svg
     viewBox="0 0 32 32"
     aria-hidden="true">
-
 
     <path
       fill="#fff"
@@ -1631,7 +1485,6 @@ footer strong{
       .66.21 1.26.18 1.73.11.53-.08 1.6-.65 1.83-1.28
       .23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
 
-
     <path
       fill="#fff"
       d="M16.01 3C8.83 3 3 8.83 3 16c0 2.29.6 4.44
@@ -1645,10 +1498,7 @@ footer strong{
 </a>
 
 
-
-<!-- ================================================= -->
-<!-- FLOATING CALL -->
-<!-- ================================================= -->
+<!-- ================= FLOATING CALL ================= -->
 
 <a
   href="tel:+966565079362"
@@ -1656,11 +1506,9 @@ footer strong{
   aria-label="اتصال"
   onclick="trackContact('Contact - Floating Call')">
 
-
   <svg
     viewBox="0 0 24 24"
     aria-hidden="true">
-
 
     <path
       fill="#fff"
@@ -1677,10 +1525,7 @@ footer strong{
 </a>
 
 
-
-<!-- ================================================= -->
-<!-- TIKTOK EVENTS -->
-<!-- ================================================= -->
+<!-- ================= TIKTOK EVENTS ================= -->
 
 <script>
 
