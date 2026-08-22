@@ -1,1232 +1,1072 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>مؤسسة أثير للخدمات المنزلية</title>
-
-  <meta name="description"
-        content="مؤسسة أثير للخدمات المنزلية - خدمات منزلية احترافية وسريعة بجودة عالية">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-  <style>
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: "Cairo", sans-serif;
-      background: #ffffff;
-      color: #102A43;
-      direction: rtl;
-      line-height: 1.8;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      width: min(1100px, 92%);
-      margin: auto;
-    }
-
-    /* ================= NAVBAR ================= */
-
-    nav {
-      position: fixed;
-      top: 0;
-      right: 0;
-      left: 0;
-      z-index: 1000;
-      background: rgba(255,255,255,.97);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid #eeeeee;
-      box-shadow: 0 2px 15px rgba(0,0,0,.05);
-    }
-
-    .nav-content {
-      min-height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-    }
-
-    .logo {
-      font-size: 22px;
-      font-weight: 800;
-      color: #102A43;
-      white-space: nowrap;
-    }
-
-    .logo span {
-      color: #C9A227;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 25px;
-      align-items: center;
-    }
-
-    .nav-links a {
-      color: #102A43;
-      font-size: 14px;
-      font-weight: 600;
-      transition: .3s;
-    }
-
-    .nav-links a:hover {
-      color: #C9A227;
-    }
-
-    .nav-actions {
-      display: flex;
-      gap: 7px;
-      align-items: center;
-    }
-
-    .nav-whatsapp {
-      background: #25D366;
-      color: #fff !important;
-      padding: 8px 14px;
-      border-radius: 8px;
-      font-weight: 700 !important;
-    }
-
-    .nav-call {
-      background: #E53935;
-      color: #fff !important;
-      padding: 8px 14px;
-      border-radius: 8px;
-      font-weight: 700 !important;
-    }
-
-    /* ================= HERO ================= */
-
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      padding: 125px 20px 75px;
-
-      background:
-        radial-gradient(
-          circle at 50% 10%,
-          rgba(201,162,39,.10),
-          transparent 35%
-        ),
-        #ffffff;
-    }
-
-    .hero-content {
-      width: 100%;
-      max-width: 1050px;
-      margin: auto;
-    }
-
-    .badge {
-      display: inline-block;
-      border: 1px solid rgba(201,162,39,.55);
-      color: #C9A227;
-      background: rgba(201,162,39,.06);
-      padding: 7px 18px;
-      border-radius: 50px;
-      font-size: 13px;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    .special-offer {
-      color: #C9A227;
-      font-size: 21px;
-      font-weight: 800;
-      margin-bottom: 2px;
-    }
-
-    .offer-text {
-      color: #555;
-      font-size: 15px;
-      font-weight: 600;
-      margin-bottom: 18px;
-    }
-
-    .hero h1 {
-      font-size: clamp(35px, 6vw, 62px);
-      line-height: 1.35;
-      font-weight: 800;
-      color: #102A43;
-      margin-bottom: 15px;
-    }
-
-    .hero h1 span {
-      color: #C9A227;
-    }
-
-    .hero p {
-      color: #667085;
-      font-size: 17px;
-      max-width: 680px;
-      margin: auto;
-    }
-
-    /* ================= BUTTONS ================= */
-
-    .hero-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 28px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 13px 28px;
-      border-radius: 9px;
-      font-size: 15px;
-      font-weight: 800;
-      transition: .3s;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 190px;
-    }
-
-    .btn-whatsapp {
-      background: #25D366;
-      color: #fff;
-      box-shadow: 0 7px 20px rgba(37,211,102,.20);
-    }
-
-    .btn-whatsapp:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 25px rgba(37,211,102,.28);
-    }
-
-    .btn-call {
-      background: #E53935;
-      color: #fff;
-      box-shadow: 0 7px 20px rgba(229,57,53,.18);
-    }
-
-    .btn-call:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 25px rgba(229,57,53,.25);
-    }
-
-    /* ================= SERVICES INSIDE HERO ================= */
-
-    .hero-services {
-      margin-top: 42px;
-    }
-
-    .hero-services-title {
-      text-align: center;
-      margin-bottom: 18px;
-    }
-
-    .hero-services-title span {
-      color: #C9A227;
-      font-size: 13px;
-      font-weight: 800;
-    }
-
-    .hero-services-title h2 {
-      color: #102A43;
-      font-size: 28px;
-      margin-top: 3px;
-    }
-
-    .hero-services-title p {
-      color: #667085;
-      font-size: 13px;
-      margin-top: 2px;
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      text-align: right;
-    }
-
-    .service {
-      padding: 20px 16px;
-      background: #fff;
-      border: 1px solid #e8e8e8;
-      border-radius: 14px;
-      transition: .3s;
-      box-shadow: 0 5px 18px rgba(16,42,67,.05);
-    }
-
-    .service:hover {
-      transform: translateY(-4px);
-      border-color: rgba(201,162,39,.55);
-      box-shadow: 0 10px 25px rgba(16,42,67,.08);
-    }
-
-    .service-icon {
-      width: 45px;
-      height: 45px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 11px;
-      background: rgba(201,162,39,.10);
-      color: #C9A227;
-      font-size: 21px;
-      margin-bottom: 10px;
-    }
-
-    .service h3 {
-      color: #102A43;
-      margin-bottom: 5px;
-      font-size: 16px;
-    }
-
-    .service p {
-      color: #667085;
-      font-size: 12px;
-      line-height: 1.65;
-    }
-
-    /* ================= STATS ================= */
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 12px;
-      margin-top: 35px;
-    }
-
-    .stat {
-      background: #fff;
-      border: 1px solid #e8e8e8;
-      border-radius: 13px;
-      padding: 17px;
-      box-shadow: 0 5px 18px rgba(16,42,67,.04);
-    }
-
-    .stat strong {
-      display: block;
-      color: #C9A227;
-      font-size: 25px;
-      font-weight: 800;
-    }
-
-    .stat span {
-      color: #667085;
-      font-size: 12px;
-    }
-
-    /* ================= WHY US ================= */
-
-    .why {
-      padding: 80px 0;
-      background: #F8FAFC;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 42px;
-    }
-
-    .section-title span {
-      color: #C9A227;
-      font-size: 14px;
-      font-weight: 800;
-    }
-
-    .section-title h2 {
-      color: #102A43;
-      font-size: 36px;
-      margin-top: 6px;
-    }
-
-    .section-title p {
-      color: #667085;
-      max-width: 650px;
-      margin: 10px auto;
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
-      gap: 15px;
-    }
-
-    .feature {
-      text-align: center;
-      padding: 25px 17px;
-      background: #fff;
-      border: 1px solid #e8e8e8;
-      border-radius: 15px;
-      box-shadow: 0 5px 18px rgba(16,42,67,.04);
-    }
-
-    .feature-icon {
-      color: #C9A227;
-      font-size: 29px;
-      margin-bottom: 7px;
-    }
-
-    .feature h3 {
-      color: #102A43;
-      margin-bottom: 5px;
-      font-size: 17px;
-    }
-
-    .feature p {
-      color: #667085;
-      font-size: 12px;
-    }
-
-    /* ================= RATING ================= */
-
-    .rating {
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    .stars {
-      color: #C9A227;
-      font-size: 25px;
-      letter-spacing: 3px;
-    }
-
-    .rating-text {
-      color: #667085;
-      font-size: 13px;
-      margin-top: 3px;
-    }
-
-    /* ================= CTA ================= */
-
-    .cta {
-      text-align: center;
-      padding: 75px 0;
-      background: #102A43;
-      color: #fff;
-    }
-
-    .cta h2 {
-      font-size: 38px;
-      margin-bottom: 10px;
-    }
-
-    .cta p {
-      color: #d9e2ec;
-      margin-bottom: 20px;
-    }
-
-    /* ================= FOOTER ================= */
-
-    footer {
-      padding: 30px 0;
-      text-align: center;
-      border-top: 1px solid #e8e8e8;
-      color: #667085;
-      font-size: 13px;
-      background: #fff;
-    }
-
-    footer strong {
-      color: #C9A227;
-    }
-
-    /* ================= FLOATING BUTTONS ================= */
-
-    .floating-buttons {
-      position: fixed;
-      bottom: 18px;
-      right: 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 9px;
-      z-index: 9999;
-    }
-
-    .floating {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      box-shadow: 0 5px 20px rgba(0,0,0,.20);
-      transition: .3s;
-    }
-
-    .floating:hover {
-      transform: scale(1.08);
-    }
-
-    .floating-whatsapp {
-      background: #25D366;
-    }
-
-    .floating-call {
-      background: #E53935;
-    }
-
-    /* ================= TABLET ================= */
-
-    @media(max-width: 850px) {
-
-      .nav-links {
-        display: none;
-      }
-
-      .nav-content {
-        justify-content: space-between;
-      }
-
-      .nav-actions {
-        display: flex;
-      }
-
-      .nav-whatsapp,
-      .nav-call {
-        padding: 7px 10px;
-        font-size: 12px;
-      }
-
-      .service-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .features {
-        grid-template-columns: repeat(2,1fr);
-      }
-
-      .stats {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
-
-    /* ================= MOBILE ================= */
-
-    @media(max-width: 550px) {
-
-      .container {
-        width: 94%;
-      }
-
-      .nav-content {
-        min-height: 64px;
-      }
-
-      .logo {
-        font-size: 17px;
-      }
-
-      .nav-actions {
-        gap: 4px;
-      }
-
-      .nav-whatsapp,
-      .nav-call {
-        padding: 6px 8px;
-        font-size: 10px;
-      }
-
-      .hero {
-        min-height: auto;
-        padding: 115px 10px 55px;
-      }
-
-      .badge {
-        font-size: 11px;
-        padding: 6px 13px;
-      }
-
-      .special-offer {
-        font-size: 19px;
-      }
-
-      .offer-text {
-        font-size: 13px;
-        margin-bottom: 14px;
-      }
-
-      .hero h1 {
-        font-size: 32px;
-        line-height: 1.4;
-      }
-
-      .hero p {
-        font-size: 14px;
-        line-height: 1.8;
-      }
-
-      .hero-buttons {
-        flex-direction: row;
-        gap: 8px;
-        width: 100%;
-      }
-
-      .btn {
-        flex: 1;
-        width: 50%;
-        min-width: 0;
-        padding: 12px 8px;
-        font-size: 13px;
-      }
-
-      /* الخدمات خدمتين بجانب بعض */
-
-      .hero-services {
-        margin-top: 32px;
-      }
-
-      .hero-services-title {
-        margin-bottom: 13px;
-      }
-
-      .hero-services-title h2 {
-        font-size: 23px;
-      }
-
-      .hero-services-title p {
-        font-size: 11px;
-      }
-
-      .service-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 9px;
-      }
-
-      .service {
-        padding: 14px 9px;
-        border-radius: 11px;
-      }
-
-      .service-icon {
-        width: 38px;
-        height: 38px;
-        font-size: 18px;
-        border-radius: 9px;
-        margin-bottom: 7px;
-      }
-
-      .service h3 {
-        font-size: 13px;
-        margin-bottom: 3px;
-        line-height: 1.5;
-      }
-
-      .service p {
-        font-size: 10px;
-        line-height: 1.55;
-      }
-
-      .stats {
-        margin-top: 25px;
-        gap: 8px;
-      }
-
-      .stat {
-        padding: 13px;
-      }
-
-      .stat strong {
-        font-size: 21px;
-      }
-
-      .stat span {
-        font-size: 11px;
-      }
-
-      .why {
-        padding: 60px 0;
-      }
-
-      .section-title {
-        margin-bottom: 30px;
-      }
-
-      .section-title h2 {
-        font-size: 28px;
-      }
-
-      .section-title p {
-        font-size: 13px;
-      }
-
-      .features {
-        grid-template-columns: repeat(2,1fr);
-        gap: 9px;
-      }
-
-      .feature {
-        padding: 18px 9px;
-      }
-
-      .feature-icon {
-        font-size: 25px;
-      }
-
-      .feature h3 {
-        font-size: 14px;
-      }
-
-      .feature p {
-        font-size: 10px;
-      }
-
-      .rating {
-        margin-top: 30px;
-      }
-
-      .stars {
-        font-size: 21px;
-      }
-
-      .rating-text {
-        font-size: 11px;
-      }
-
-      .cta {
-        padding: 60px 15px;
-      }
-
-      .cta h2 {
-        font-size: 29px;
-      }
-
-      .cta p {
-        font-size: 13px;
-      }
-
-      .floating-buttons {
-        right: 12px;
-        bottom: 12px;
-      }
-
-      .floating {
-        width: 52px;
-        height: 52px;
-        font-size: 22px;
-      }
-
-    }
-
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>مؤسسة أثير للخدمات المنزلية</title>
+
+<meta name="description" content="مؤسسة أثير للخدمات المنزلية - خدمات منزلية احترافية وسريعة بجودة عالية">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"Cairo",sans-serif;
+  background:#fff;
+  color:#102A43;
+  direction:rtl;
+  line-height:1.7;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:min(1050px,94%);
+  margin:auto;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+  position:fixed;
+  top:0;
+  right:0;
+  left:0;
+  z-index:1000;
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid #eee;
+  box-shadow:0 2px 12px rgba(0,0,0,.05);
+}
+
+.nav-content{
+  min-height:68px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.logo-text{
+  font-size:20px;
+  font-weight:800;
+  color:#102A43;
+}
+
+.logo-text span{
+  color:#C9A227;
+}
+
+.nav-links{
+  display:flex;
+  gap:24px;
+  align-items:center;
+}
+
+.nav-links a{
+  font-size:13px;
+  font-weight:600;
+  color:#102A43;
+}
+
+.nav-actions{
+  display:flex;
+  gap:6px;
+}
+
+.nav-whatsapp,
+.nav-call{
+  color:#fff!important;
+  padding:7px 12px;
+  border-radius:8px;
+  font-size:12px;
+  font-weight:800;
+}
+
+.nav-whatsapp{
+  background:#25D366;
+}
+
+.nav-call{
+  background:#E53935;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  padding:110px 10px 55px;
+  text-align:center;
+  background:
+    radial-gradient(circle at 50% 5%,rgba(201,162,39,.11),transparent 32%),
+    #fff;
+}
+
+.hero-content{
+  max-width:1050px;
+  margin:auto;
+}
+
+/* ================= LOGO ================= */
+
+.hero-logo{
+  width:105px;
+  height:105px;
+  margin:0 auto 14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero-logo svg{
+  width:100%;
+  height:100%;
+}
+
+/* ================= OFFER BOX ================= */
+
+.offer-box{
+  max-width:600px;
+  margin:0 auto 20px;
+  padding:14px 20px;
+  border:1px solid rgba(201,162,39,.65);
+  border-radius:14px;
+  background:linear-gradient(
+    135deg,
+    #fffdf4,
+    #fff8dc
+  );
+  box-shadow:0 5px 20px rgba(201,162,39,.10);
+}
+
+.offer-title{
+  color:#A47E00;
+  font-size:21px;
+  font-weight:800;
+  line-height:1.5;
+}
+
+.offer-subtitle{
+  color:#102A43;
+  font-size:14px;
+  font-weight:700;
+  margin-top:2px;
+}
+
+/* ================= HERO TEXT ================= */
+
+.hero p{
+  max-width:650px;
+  margin:0 auto;
+  color:#667085;
+  font-size:15px;
+}
+
+/* ================= BUTTONS ================= */
+
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-top:25px;
+}
+
+.btn{
+  flex:0 1 210px;
+  padding:13px 18px;
+  border-radius:9px;
+  font-size:14px;
+  font-weight:800;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:.25s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.btn-whatsapp{
+  background:#25D366;
+  color:#fff;
+  box-shadow:0 7px 18px rgba(37,211,102,.20);
+}
+
+.btn-call{
+  background:#E53935;
+  color:#fff;
+  box-shadow:0 7px 18px rgba(229,57,53,.18);
+}
+
+/* ================= SERVICES ================= */
+
+.hero-services{
+  margin-top:35px;
+}
+
+.services-title{
+  margin-bottom:15px;
+}
+
+.services-title span{
+  color:#C9A227;
+  font-size:13px;
+  font-weight:800;
+}
+
+.services-title h2{
+  font-size:26px;
+  color:#102A43;
+}
+
+.services-title p{
+  color:#667085;
+  font-size:12px;
+}
+
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:11px;
+}
+
+.service{
+  background:#fff;
+  border:1px solid #e7e7e7;
+  border-radius:13px;
+  padding:18px 13px;
+  text-align:right;
+  box-shadow:0 4px 15px rgba(16,42,67,.045);
+  transition:.25s;
+}
+
+.service:hover{
+  transform:translateY(-3px);
+  border-color:rgba(201,162,39,.55);
+}
+
+.service-icon{
+  width:42px;
+  height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:10px;
+  background:rgba(201,162,39,.10);
+  font-size:20px;
+  margin-bottom:8px;
+}
+
+.service h3{
+  color:#102A43;
+  font-size:14px;
+  margin-bottom:3px;
+}
+
+.service p{
+  color:#667085;
+  font-size:10px;
+  line-height:1.55;
+}
+
+/* ================= STATS ================= */
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  margin-top:25px;
+}
+
+.stat{
+  background:#fff;
+  border:1px solid #e8e8e8;
+  border-radius:12px;
+  padding:14px;
+}
+
+.stat strong{
+  display:block;
+  color:#C9A227;
+  font-size:22px;
+  font-weight:800;
+}
+
+.stat span{
+  color:#667085;
+  font-size:11px;
+}
+
+/* ================= WHY ================= */
+
+.why{
+  padding:65px 0;
+  background:#F8FAFC;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:32px;
+}
+
+.section-title span{
+  color:#C9A227;
+  font-size:13px;
+  font-weight:800;
+}
+
+.section-title h2{
+  font-size:30px;
+  color:#102A43;
+}
+
+.section-title p{
+  color:#667085;
+  font-size:13px;
+  max-width:600px;
+  margin:7px auto;
+}
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+}
+
+.feature{
+  text-align:center;
+  background:#fff;
+  border:1px solid #e8e8e8;
+  border-radius:13px;
+  padding:22px 12px;
+}
+
+.feature-icon{
+  color:#C9A227;
+  font-size:27px;
+}
+
+.feature h3{
+  font-size:15px;
+  margin:4px 0;
+}
+
+.feature p{
+  color:#667085;
+  font-size:11px;
+}
+
+/* ================= RATING ================= */
+
+.rating{
+  text-align:center;
+  margin-top:30px;
+}
+
+.stars{
+  color:#C9A227;
+  font-size:22px;
+  letter-spacing:2px;
+}
+
+.rating-text{
+  color:#667085;
+  font-size:11px;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+  text-align:center;
+  padding:65px 15px;
+  background:#102A43;
+  color:#fff;
+}
+
+.cta h2{
+  font-size:30px;
+  margin-bottom:7px;
+}
+
+.cta p{
+  color:#d9e2ec;
+  font-size:13px;
+  margin-bottom:18px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  padding:27px 10px;
+  text-align:center;
+  color:#667085;
+  font-size:12px;
+}
+
+footer strong{
+  color:#C9A227;
+}
+
+/* ================= FLOATING WHATSAPP ================= */
+
+.floating-whatsapp{
+  position:fixed;
+  right:16px;
+  bottom:18px;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  background:#25D366;
+  color:#fff;
+  padding:10px 16px;
+  border-radius:50px;
+  font-size:13px;
+  font-weight:800;
+  box-shadow:0 6px 22px rgba(0,0,0,.20);
+  animation:whatsappPulse 2.4s infinite;
+}
+
+@keyframes whatsappPulse{
+  0%,100%{
+    box-shadow:0 6px 22px rgba(0,0,0,.20);
+  }
+  50%{
+    box-shadow:0 6px 28px rgba(37,211,102,.45);
+  }
+}
+
+.floating-call{
+  position:fixed;
+  right:16px;
+  bottom:75px;
+  z-index:9999;
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#E53935;
+  color:#fff;
+  font-size:22px;
+  box-shadow:0 6px 20px rgba(0,0,0,.20);
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:850px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .service-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .features{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .stats{
+    grid-template-columns:1fr;
+    max-width:400px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+
+@media(max-width:550px){
+
+  .container{
+    width:94%;
+  }
+
+  .nav-content{
+    min-height:62px;
+  }
+
+  .logo-text{
+    font-size:17px;
+  }
+
+  .nav-whatsapp,
+  .nav-call{
+    padding:6px 8px;
+    font-size:10px;
+  }
+
+  .hero{
+    padding:105px 9px 50px;
+  }
+
+  .hero-logo{
+    width:88px;
+    height:88px;
+    margin-bottom:10px;
+  }
+
+  .offer-box{
+    padding:12px 12px;
+    margin-bottom:17px;
+  }
+
+  .offer-title{
+    font-size:18px;
+  }
+
+  .offer-subtitle{
+    font-size:12px;
+  }
+
+  .hero p{
+    font-size:13px;
+  }
+
+  .hero-buttons{
+    gap:7px;
+  }
+
+  .btn{
+    flex:1;
+    min-width:0;
+    padding:11px 7px;
+    font-size:12px;
+  }
+
+  .hero-services{
+    margin-top:28px;
+  }
+
+  .services-title h2{
+    font-size:22px;
+  }
+
+  .services-title p{
+    font-size:10px;
+  }
+
+  .service-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:8px;
+  }
+
+  .service{
+    padding:13px 8px;
+    border-radius:10px;
+  }
+
+  .service-icon{
+    width:36px;
+    height:36px;
+    font-size:17px;
+    margin-bottom:6px;
+  }
+
+  .service h3{
+    font-size:12px;
+  }
+
+  .service p{
+    font-size:9px;
+  }
+
+  .feature{
+    padding:17px 8px;
+  }
+
+  .feature h3{
+    font-size:13px;
+  }
+
+  .feature p{
+    font-size:9px;
+  }
+
+  .floating-whatsapp{
+    right:12px;
+    bottom:13px;
+    padding:9px 14px;
+    font-size:12px;
+  }
+
+  .floating-call{
+    right:12px;
+    bottom:66px;
+    width:48px;
+    height:48px;
+    font-size:20px;
+  }
+
+}
+
+</style>
 </head>
 
 <body>
 
-  <!-- ================= NAVBAR ================= -->
+<!-- ================= NAVBAR ================= -->
 
-  <nav>
+<nav>
+  <div class="container nav-content">
 
-    <div class="container nav-content">
+    <div class="logo-text">
+      مؤسسة <span>أثير</span>
+    </div>
 
-      <div class="logo">
-        مؤسسة <span>أثير</span>
-      </div>
+    <div class="nav-links">
+      <a href="#services">خدماتنا</a>
+      <a href="#why">لماذا أثير؟</a>
+      <a href="#contact">تواصل معنا</a>
+    </div>
 
-      <div class="nav-links">
+    <div class="nav-actions">
 
-        <a href="#services">
-          خدماتنا
-        </a>
+      <a
+        href="https://wa.me/966565079362"
+        target="_blank"
+        rel="noopener"
+        class="nav-whatsapp">
+        واتساب
+      </a>
 
-        <a href="#why">
-          لماذا أثير؟
-        </a>
-
-        <a href="#contact">
-          تواصل معنا
-        </a>
-
-      </div>
-
-      <div class="nav-actions">
-
-        <a
-          href="https://wa.me/966565079362"
-          target="_blank"
-          class="nav-whatsapp">
-          واتساب
-        </a>
-
-        <a
-          href="tel:+966565079362"
-          class="nav-call">
-          اتصال
-        </a>
-
-      </div>
+      <a
+        href="tel:+966565079362"
+        class="nav-call">
+        اتصال
+      </a>
 
     </div>
 
-  </nav>
+  </div>
+</nav>
 
 
-  <!-- ================= HERO ================= -->
+<!-- ================= HERO ================= -->
 
-  <header class="hero">
+<header class="hero">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-      <!-- اسم المؤسسة -->
+  <!-- LOGO -->
 
-      <div class="badge">
-        مؤسسة أثير للخدمات المنزلية
-      </div>
+  <div class="hero-logo">
 
-      <!-- العروض -->
+    <svg viewBox="0 0 200 200"
+         xmlns="http://www.w3.org/2000/svg"
+         aria-label="شعار أثير">
 
-      <div class="special-offer">
-        عروض خاصة لا تفوتك!
-      </div>
+      <circle
+        cx="100"
+        cy="100"
+        r="92"
+        fill="#102A43"/>
 
-      <div class="offer-text">
-        عروض مميزة على جميع الخدمات
-      </div>
+      <circle
+        cx="100"
+        cy="100"
+        r="84"
+        fill="none"
+        stroke="#C9A227"
+        stroke-width="4"/>
 
-      <!-- العنوان -->
+      <!-- رمز المنزل -->
 
-      <h1>
-        خدمات منزلية
-        <span>باحترافية عالية</span>
-      </h1>
+      <path
+        d="M55 96 L100 57 L145 96"
+        fill="none"
+        stroke="#C9A227"
+        stroke-width="8"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+      <path
+        d="M67 91 V139 H133 V91"
+        fill="none"
+        stroke="#fff"
+        stroke-width="7"
+        stroke-linejoin="round"/>
+
+      <path
+        d="M91 139 V111 H109 V139"
+        fill="none"
+        stroke="#C9A227"
+        stroke-width="6"/>
+
+      <!-- كلمة أثير -->
+
+      <text
+        x="100"
+        y="160"
+        text-anchor="middle"
+        font-family="Cairo, Arial, sans-serif"
+        font-size="27"
+        font-weight="800"
+        fill="#fff">
+        أثير
+      </text>
+
+    </svg>
+
+  </div>
+
+
+  <!-- OFFER -->
+
+  <div class="offer-box">
+
+    <div class="offer-title">
+      عروض خاصة لا تفوتك!
+    </div>
+
+    <div class="offer-subtitle">
+      عروض مميزة على جميع الخدمات
+    </div>
+
+  </div>
+
+
+  <!-- DESCRIPTION -->
+
+  <p>
+    نقدم لكم خدمات منزلية متكاملة بجودة عالية،
+    وفريق متخصص لخدمتكم بسرعة واحترافية.
+  </p>
+
+
+  <!-- BUTTONS -->
+
+  <div class="hero-buttons">
+
+    <a
+      href="https://wa.me/966565079362"
+      target="_blank"
+      rel="noopener"
+      class="btn btn-whatsapp">
+      💬 تواصل عبر واتساب
+    </a>
+
+    <a
+      href="tel:+966565079362"
+      class="btn btn-call">
+      📞 اتصل الآن
+    </a>
+
+  </div>
+
+
+  <!-- ================= SERVICES ================= -->
+
+  <div class="hero-services" id="services">
+
+    <div class="services-title">
+
+      <span>خدماتنا</span>
+
+      <h2>
+        كل ما يحتاجه منزلك
+      </h2>
 
       <p>
-        نقدم لكم خدمات منزلية متكاملة بجودة عالية،
-        وفريق متخصص لخدمتكم بسرعة واحترافية.
+        خدمات منزلية متكاملة بأيدي فريق متخصص
       </p>
-
-      <!-- أزرار الاتصال -->
-
-      <div class="hero-buttons">
-
-        <a
-          href="https://wa.me/966565079362"
-          target="_blank"
-          class="btn btn-whatsapp">
-
-          💬 تواصل عبر واتساب
-
-        </a>
-
-        <a
-          href="tel:+966565079362"
-          class="btn btn-call">
-
-          📞 اتصل الآن
-
-        </a>
-
-      </div>
-
-
-      <!-- ================= SERVICES ================= -->
-
-      <div class="hero-services" id="services">
-
-        <div class="hero-services-title">
-
-          <span>
-            خدماتنا
-          </span>
-
-          <h2>
-            كل ما يحتاجه منزلك
-          </h2>
-
-          <p>
-            خدمات منزلية متكاملة بأيدي فريق متخصص
-          </p>
-
-        </div>
-
-
-        <div class="service-grid">
-
-          <!-- 1 -->
-
-          <div class="service">
-
-            <div class="service-icon">
-              ❄️
-            </div>
-
-            <h3>
-              تنظيف المكيفات
-            </h3>
-
-            <p>
-              تنظيف المكيفات وتحسين كفاءة التبريد.
-            </p>
-
-          </div>
-
-
-          <!-- 2 -->
-
-          <div class="service">
-
-            <div class="service-icon">
-              🧹
-            </div>
-
-            <h3>
-              تنظيف المنازل والفلل
-            </h3>
-
-            <p>
-              تنظيف شامل للمنازل والفلل باحترافية.
-            </p>
-
-          </div>
-
-
-          <!-- 3 -->
-
-          <div class="service">
-
-            <div class="service-icon">
-              🛋️
-            </div>
-
-            <h3>
-              تنظيف الكنب والمجالس
-            </h3>
-
-            <p>
-              تنظيف وإزالة البقع والأوساخ.
-            </p>
-
-          </div>
-
-
-          <!-- 4 -->
-
-          <div class="service">
-
-            <div class="service-icon">
-              🧽
-            </div>
-
-            <h3>
-              تنظيف السجاد
-            </h3>
-
-            <p>
-              تنظيف السجاد بعناية واحترافية.
-            </p>
-
-          </div>
-
-
-          <!-- 5 -->
-
-          <div class="service">
-
-            <div class="service-icon">
-              🪣
-            </div>
-
-            <h3>
-              تنظيف الخزانات
-            </h3>
-
-            <p>
-              تنظيف وتعقيم خزانات المياه.
-            </p>
-
-          </div>
-
-
-          <!-- 6 -->
-
-          <div class="service">
-
-            <div class="service-icon">
-              🦟
-            </div>
-
-            <h3>
-              مكافحة الحشرات
-            </h3>
-
-            <p>
-              مكافحة الحشرات بطرق فعالة وآمنة.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- الإحصائيات -->
-
-      <div class="stats">
-
-        <div class="stat">
-
-          <strong>
-            24/7
-          </strong>
-
-          <span>
-            جاهزون لخدمتكم
-          </span>
-
-        </div>
-
-
-        <div class="stat">
-
-          <strong>
-            ✓
-          </strong>
-
-          <span>
-            خدمة سريعة وموثوقة
-          </span>
-
-        </div>
-
-
-        <div class="stat">
-
-          <strong>
-            ⭐ 5
-          </strong>
-
-          <span>
-            خدمة احترافية
-          </span>
-
-        </div>
-
-      </div>
 
     </div>
 
-  </header>
 
+    <div class="service-grid">
 
-  <!-- ================= WHY US ================= -->
+      <div class="service">
 
-  <section class="why" id="why">
+        <div class="service-icon">❄️</div>
 
-    <div class="container">
-
-      <div class="section-title">
-
-        <span>
-          لماذا أثير؟
-        </span>
-
-        <h2>
-          جودة تستحق ثقتك
-        </h2>
+        <h3>تنظيف المكيفات</h3>
 
         <p>
-          نهتم بأدق التفاصيل لنقدم لك تجربة
-          خدمة مريحة واحترافية.
+          تنظيف المكيفات وتحسين كفاءة التبريد.
         </p>
 
       </div>
 
 
-      <div class="features">
+      <div class="service">
 
-        <div class="feature">
+        <div class="service-icon">🧹</div>
 
-          <div class="feature-icon">
-            ✓
-          </div>
+        <h3>تنظيف المنازل والفلل</h3>
 
-          <h3>
-            أسعار منافسة
-          </h3>
-
-          <p>
-            أسعار مناسبة وخيارات متعددة.
-          </p>
-
-        </div>
-
-
-        <div class="feature">
-
-          <div class="feature-icon">
-            ⚡
-          </div>
-
-          <h3>
-            خدمة سريعة
-          </h3>
-
-          <p>
-            نصل إليك في أسرع وقت ممكن.
-          </p>
-
-        </div>
-
-
-        <div class="feature">
-
-          <div class="feature-icon">
-            🛡️
-          </div>
-
-          <h3>
-            ضمان الخدمة
-          </h3>
-
-          <p>
-            نحرص على جودة العمل ورضا العميل.
-          </p>
-
-        </div>
-
-
-        <div class="feature">
-
-          <div class="feature-icon">
-            👨‍🔧
-          </div>
-
-          <h3>
-            فريق محترف
-          </h3>
-
-          <p>
-            فريق متخصص لتنفيذ الخدمة باحترافية.
-          </p>
-
-        </div>
+        <p>
+          تنظيف شامل للمنازل والفلل باحترافية.
+        </p>
 
       </div>
 
 
-      <!-- التقييم -->
+      <div class="service">
 
-      <div class="rating">
+        <div class="service-icon">🛋️</div>
 
-        <div class="stars">
-          ⭐⭐⭐⭐⭐
-        </div>
+        <h3>تنظيف الكنب والمجالس</h3>
 
-        <div class="rating-text">
-          خدمة احترافية نهتم فيها برضا عملائنا
-        </div>
+        <p>
+          تنظيف وإزالة البقع والأوساخ.
+        </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <div class="service-icon">🧽</div>
+
+        <h3>تنظيف السجاد</h3>
+
+        <p>
+          تنظيف السجاد بعناية واحترافية.
+        </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <div class="service-icon">🪣</div>
+
+        <h3>تنظيف الخزانات</h3>
+
+        <p>
+          تنظيف وتعقيم خزانات المياه.
+        </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <div class="service-icon">🦟</div>
+
+        <h3>مكافحة الحشرات</h3>
+
+        <p>
+          مكافحة الحشرات بطرق فعالة وآمنة.
+        </p>
 
       </div>
 
     </div>
 
-  </section>
+  </div>
 
 
-  <!-- ================= CTA ================= -->
+  <!-- STATS -->
 
-  <section class="cta" id="contact">
+  <div class="stats">
 
-    <div class="container">
+    <div class="stat">
+      <strong>24/7</strong>
+      <span>جاهزون لخدمتكم</span>
+    </div>
 
-      <h2>
-        جاهزون لخدمتكم
-      </h2>
+    <div class="stat">
+      <strong>✓</strong>
+      <span>خدمة سريعة وموثوقة</span>
+    </div>
+
+    <div class="stat">
+      <strong>⭐ 5</strong>
+      <span>خدمة احترافية</span>
+    </div>
+
+  </div>
+
+</div>
+
+</header>
+
+
+<!-- ================= WHY US ================= -->
+
+<section class="why" id="why">
+
+<div class="container">
+
+  <div class="section-title">
+
+    <span>لماذا أثير؟</span>
+
+    <h2>جودة تستحق ثقتك</h2>
+
+    <p>
+      نهتم بأدق التفاصيل لنقدم لك تجربة
+      خدمة مريحة واحترافية.
+    </p>
+
+  </div>
+
+
+  <div class="features">
+
+    <div class="feature">
+
+      <div class="feature-icon">✓</div>
+
+      <h3>أسعار منافسة</h3>
 
       <p>
-        تواصل معنا الآن واحجز خدمتك بسهولة.
+        أسعار مناسبة وخيارات متعددة.
       </p>
-
-      <div class="hero-buttons">
-
-        <a
-          href="https://wa.me/966565079362"
-          target="_blank"
-          class="btn btn-whatsapp">
-
-          💬 واتساب
-
-        </a>
-
-        <a
-          href="tel:+966565079362"
-          class="btn btn-call">
-
-          📞 اتصل الآن
-
-        </a>
-
-      </div>
 
     </div>
 
-  </section>
+
+    <div class="feature">
+
+      <div class="feature-icon">⚡</div>
+
+      <h3>خدمة سريعة</h3>
+
+      <p>
+        نصل إليك في أسرع وقت ممكن.
+      </p>
+
+    </div>
 
 
-  <!-- ================= FOOTER ================= -->
+    <div class="feature">
 
-  <footer>
+      <div class="feature-icon">🛡️</div>
 
-    © 2026
-    <strong>
-      مؤسسة أثير للخدمات المنزلية
-    </strong>
-    - جميع الحقوق محفوظة
+      <h3>ضمان الخدمة</h3>
 
-  </footer>
+      <p>
+        نحرص على جودة العمل ورضا العميل.
+      </p>
+
+    </div>
 
 
-  <!-- ================= FLOATING BUTTONS ================= -->
+    <div class="feature">
 
-  <div class="floating-buttons">
+      <div class="feature-icon">👨‍🔧</div>
+
+      <h3>فريق محترف</h3>
+
+      <p>
+        فريق متخصص لتنفيذ الخدمة باحترافية.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="rating">
+
+    <div class="stars">
+      ⭐⭐⭐⭐⭐
+    </div>
+
+    <div class="rating-text">
+      خدمة احترافية نهتم فيها برضا عملائنا
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta" id="contact">
+
+<div class="container">
+
+  <h2>
+    جاهزون لخدمتكم
+  </h2>
+
+  <p>
+    تواصل معنا الآن واحجز خدمتك بسهولة.
+  </p>
+
+  <div class="hero-buttons">
 
     <a
       href="https://wa.me/966565079362"
       target="_blank"
-      class="floating floating-whatsapp"
-      aria-label="التواصل عبر واتساب">
-
-      💬
-
+      rel="noopener"
+      class="btn btn-whatsapp">
+      💬 واتساب
     </a>
 
     <a
       href="tel:+966565079362"
-      class="floating floating-call"
-      aria-label="الاتصال">
-
-      📞
-
+      class="btn btn-call">
+      📞 اتصل الآن
     </a>
 
   </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  © 2026
+  <strong>مؤسسة أثير للخدمات المنزلية</strong>
+  - جميع الحقوق محفوظة
+
+</footer>
+
+
+<!-- ================= FLOATING WHATSAPP ================= -->
+
+<a
+  href="https://wa.me/966565079362"
+  target="_blank"
+  rel="noopener"
+  class="floating-whatsapp"
+  aria-label="التواصل عبر واتساب">
+
+  <span>💬</span>
+  <span>واتساب</span>
+
+</a>
+
+
+<!-- ================= FLOATING CALL ================= -->
+
+<a
+  href="tel:+966565079362"
+  class="floating-call"
+  aria-label="الاتصال">
+
+  📞
+
+</a>
 
 </body>
 </html>
