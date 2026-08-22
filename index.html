@@ -22,6 +22,7 @@ rel="stylesheet">
 <script>
 !function (w, d, t) {
   w.TiktokAnalyticsObject=t;
+
   var ttq=w[t]=w[t]||[];
 
   ttq.methods=[
@@ -39,21 +40,24 @@ rel="stylesheet">
     }
   };
 
-  for(var i=0;i<ttq.methods.length;i++)
+  for(var i=0;i<ttq.methods.length;i++){
     ttq.setAndDefer(ttq,ttq.methods[i]);
+  }
 
   ttq.instance=function(t){
     for(
       var e=ttq._i[t]||[],n=0;
       n<ttq.methods.length;
       n++
-    )
+    ){
       ttq.setAndDefer(e,ttq.methods[n]);
+    }
 
     return e
   };
 
   ttq.load=function(e,n){
+
     var r="https://analytics.tiktok.com/i18n/pixel/events.js";
 
     ttq._i=ttq._i||{};
@@ -73,7 +77,10 @@ rel="stylesheet">
     e.parentNode.insertBefore(n,e);
   };
 
+  /* Pixel ID */
   ttq.load('DA4HAEJC77UES973R9P0');
+
+  /* Page View */
   ttq.page();
 
 }(window, document, 'ttq');
@@ -939,13 +946,9 @@ footer strong{
 
   <div class="container nav-content">
 
-
     <div class="logo-text">
-
       مؤسسة <span>أثير</span>
-
     </div>
-
 
     <div class="nav-links">
 
@@ -963,7 +966,6 @@ footer strong{
 
     </div>
 
-
     <div class="nav-actions">
 
       <a
@@ -971,7 +973,7 @@ footer strong{
         target="_blank"
         rel="noopener"
         class="nav-whatsapp"
-        onclick="trackContact('Contact - WhatsApp')">
+        onclick="trackWhatsApp(event,'Navbar WhatsApp')">
 
         واتساب
 
@@ -981,7 +983,7 @@ footer strong{
       <a
         href="tel:+966565079362"
         class="nav-call"
-        onclick="trackContact('Contact - Call')">
+        onclick="trackCall(event,'Navbar Call')">
 
         اتصال
 
@@ -1097,7 +1099,7 @@ footer strong{
       target="_blank"
       rel="noopener"
       class="btn btn-whatsapp"
-      onclick="trackContact('Contact - WhatsApp')">
+      onclick="trackWhatsApp(event,'Hero WhatsApp')">
 
       💬 تواصل عبر واتساب
 
@@ -1107,7 +1109,7 @@ footer strong{
     <a
       href="tel:+966565079362"
       class="btn btn-call"
-      onclick="trackContact('Contact - Call')">
+      onclick="trackCall(event,'Hero Call')">
 
       📞 اتصل الآن
 
@@ -1418,7 +1420,7 @@ footer strong{
       target="_blank"
       rel="noopener"
       class="btn btn-whatsapp"
-      onclick="trackContact('Contact - WhatsApp')">
+      onclick="trackWhatsApp(event,'CTA WhatsApp')">
 
       💬 واتساب
 
@@ -1428,7 +1430,7 @@ footer strong{
     <a
       href="tel:+966565079362"
       class="btn btn-call"
-      onclick="trackContact('Contact - Call')">
+      onclick="trackCall(event,'CTA Call')">
 
       📞 اتصل الآن
 
@@ -1465,7 +1467,7 @@ footer strong{
   rel="noopener"
   class="floating-whatsapp"
   aria-label="واتساب"
-  onclick="trackContact('Contact - Floating WhatsApp')">
+  onclick="trackWhatsApp(event,'Floating WhatsApp')">
 
   <svg
     viewBox="0 0 32 32"
@@ -1504,7 +1506,7 @@ footer strong{
   href="tel:+966565079362"
   class="floating-call"
   aria-label="اتصال"
-  onclick="trackContact('Contact - Floating Call')">
+  onclick="trackCall(event,'Floating Call')">
 
   <svg
     viewBox="0 0 24 24"
@@ -1529,21 +1531,137 @@ footer strong{
 
 <script>
 
-function trackContact(eventName){
+/*
+====================================================
+TikTok Events
+====================================================
+*/
 
-  if(
-    typeof ttq !== "undefined" &&
-    typeof ttq.track === "function"
-  ){
+function sendTikTokEvent(eventName, contentName){
 
-    ttq.track(
-      'Contact',
-      {
-        content_name:eventName
-      }
-    );
+  try{
+
+    if(
+      typeof ttq !== "undefined" &&
+      typeof ttq.track === "function"
+    ){
+
+      ttq.track(
+        eventName,
+        {
+          content_name: contentName,
+          content_type: "lead"
+        }
+      );
+
+      return true;
+
+    }
+
+  }catch(error){
+
+    console.log("TikTok Pixel Error:", error);
 
   }
+
+  return false;
+
+}
+
+
+/*
+====================================================
+ViewContent
+يتم إرساله بعد تحميل الصفحة
+====================================================
+*/
+
+window.addEventListener("load", function(){
+
+  setTimeout(function(){
+
+    sendTikTokEvent(
+      "ViewContent",
+      "Ather Home Services Landing Page"
+    );
+
+  }, 500);
+
+});
+
+
+/*
+====================================================
+WhatsApp
+====================================================
+*/
+
+function trackWhatsApp(event, buttonName){
+
+  if(event){
+    event.preventDefault();
+  }
+
+  sendTikTokEvent(
+    "Contact",
+    buttonName
+  );
+
+  var link = event ? event.currentTarget : null;
+
+  setTimeout(function(){
+
+    if(link){
+
+      if(link.target === "_blank"){
+
+        window.open(
+          link.href,
+          "_blank",
+          "noopener"
+        );
+
+      }else{
+
+        window.location.href = link.href;
+
+      }
+
+    }
+
+  }, 300);
+
+}
+
+
+/*
+====================================================
+Call
+====================================================
+*/
+
+function trackCall(event, buttonName){
+
+  if(event){
+    event.preventDefault();
+  }
+
+  sendTikTokEvent(
+    "Contact",
+    buttonName
+  );
+
+  var link = event ? event.currentTarget : null;
+
+  setTimeout(function(){
+
+    if(link){
+
+      window.location.href = link.href;
+
+    }
+
+  }, 300);
 
 }
 
