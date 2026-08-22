@@ -16,9 +16,78 @@ content="مؤسسة أثير للخدمات المنزلية - خدمات منز
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
 rel="stylesheet">
 
+
+<!-- ================================================= -->
+<!-- TIKTOK PIXEL -->
+<!-- ================================================= -->
+
+<script>
+!function (w, d, t) {
+  w.TiktokAnalyticsObject=t;
+  var ttq=w[t]=w[t]||[];
+
+  ttq.methods=[
+    "page","track","identify","instances","debug",
+    "on","off","once","ready","alias","group",
+    "enableCookie","disableCookie","holdConsent",
+    "revokeConsent","grantConsent"
+  ];
+
+  ttq.setAndDefer=function(t,e){
+    t[e]=function(){
+      t.push([e].concat(
+        Array.prototype.slice.call(arguments,0)
+      ))
+    }
+  };
+
+  for(var i=0;i<ttq.methods.length;i++)
+    ttq.setAndDefer(ttq,ttq.methods[i]);
+
+  ttq.instance=function(t){
+    for(
+      var e=ttq._i[t]||[],n=0;
+      n<ttq.methods.length;
+      n++
+    )
+      ttq.setAndDefer(e,ttq.methods[n]);
+
+    return e
+  };
+
+  ttq.load=function(e,n){
+    var r="https://analytics.tiktok.com/i18n/pixel/events.js",
+        o=n&&n.partner;
+
+    ttq._i=ttq._i||{};
+    ttq._i[e]=[];
+    ttq._i[e]._u=r;
+    ttq._t=ttq._t||{};
+    ttq._t[e]=+new Date;
+    ttq._o=ttq._o||{};
+    ttq._o[e]=n||{};
+
+    n=document.createElement("script");
+    n.type="text/javascript";
+    n.async=!0;
+    n.src=r+"?sdkid="+e+"&lib="+t;
+
+    e=document.getElementsByTagName("script")[0];
+    e.parentNode.insertBefore(n,e);
+  };
+
+  ttq.load('DA4HAEJC77UES973R9P0');
+  ttq.page();
+
+}(window, document, 'ttq');
+</script>
+
+
 <style>
 
-/* ================= GENERAL ================= */
+/* ================================================= */
+/* GENERAL */
+/* ================================================= */
 
 *{
   margin:0;
@@ -49,7 +118,9 @@ a{
 }
 
 
-/* ================= NAVBAR ================= */
+/* ================================================= */
+/* NAVBAR */
+/* ================================================= */
 
 nav{
   position:fixed;
@@ -107,7 +178,6 @@ nav{
   color:#fff!important;
   padding:7px 12px;
   border-radius:8px;
-
   font-size:12px;
   font-weight:800;
 }
@@ -121,7 +191,9 @@ nav{
 }
 
 
-/* ================= HERO ================= */
+/* ================================================= */
+/* HERO */
+/* ================================================= */
 
 .hero{
   padding:110px 10px 55px;
@@ -143,7 +215,9 @@ nav{
 }
 
 
-/* ================= LOGO ================= */
+/* ================================================= */
+/* LOGO */
+/* ================================================= */
 
 .hero-logo{
   width:105px;
@@ -162,32 +236,29 @@ nav{
 }
 
 
-/* ================= OFFER ================= */
+/* ================================================= */
+/* OFFER BOX */
+/* ================================================= */
 
 .offer-box{
   max-width:600px;
 
   margin:0 auto 20px;
 
-  padding:14px 20px;
-
-  border:1px solid rgba(201,162,39,.65);
+  padding:15px 20px;
 
   border-radius:14px;
 
-  background:
-    linear-gradient(
-      135deg,
-      #fffdf4,
-      #fff8dc
-    );
+  background:#102A43;
+
+  border:1px solid #C9A227;
 
   box-shadow:
-    0 5px 20px rgba(201,162,39,.10);
+    0 7px 22px rgba(16,42,67,.15);
 }
 
 .offer-title{
-  color:#A47E00;
+  color:#C9A227;
 
   font-size:21px;
 
@@ -197,7 +268,7 @@ nav{
 }
 
 .offer-subtitle{
-  color:#102A43;
+  color:#fff;
 
   font-size:14px;
 
@@ -207,7 +278,9 @@ nav{
 }
 
 
-/* ================= HERO DESCRIPTION ================= */
+/* ================================================= */
+/* HERO DESCRIPTION */
+/* ================================================= */
 
 .hero p{
   max-width:650px;
@@ -220,7 +293,9 @@ nav{
 }
 
 
-/* ================= BUTTONS ================= */
+/* ================================================= */
+/* BUTTONS */
+/* ================================================= */
 
 .hero-buttons{
   display:flex;
@@ -230,6 +305,8 @@ nav{
   gap:10px;
 
   margin-top:25px;
+
+  flex-wrap:wrap;
 }
 
 .btn{
@@ -275,7 +352,9 @@ nav{
 }
 
 
-/* ================= SERVICES ================= */
+/* ================================================= */
+/* SERVICES */
+/* ================================================= */
 
 .hero-services{
   margin-top:35px;
@@ -306,7 +385,9 @@ nav{
 }
 
 
+/* ================================================= */
 /* SERVICE GRID */
+/* ================================================= */
 
 .service-grid{
   display:grid;
@@ -318,12 +399,14 @@ nav{
 }
 
 
+/* ================================================= */
 /* SERVICE CARD */
+/* ================================================= */
 
 .service{
-  background:#fff;
+  background:#102A43;
 
-  border:1px solid #e7e7e7;
+  border:1px solid #183B5A;
 
   border-radius:13px;
 
@@ -332,7 +415,7 @@ nav{
   text-align:right;
 
   box-shadow:
-    0 4px 15px rgba(16,42,67,.045);
+    0 5px 18px rgba(16,42,67,.15);
 
   transition:.25s;
 }
@@ -340,9 +423,11 @@ nav{
 .service:hover{
   transform:translateY(-3px);
 
-  border-color:
-    rgba(201,162,39,.55);
+  border-color:#C9A227;
 }
+
+
+/* SERVICE ICON */
 
 .service-icon{
   width:42px;
@@ -355,24 +440,31 @@ nav{
 
   border-radius:10px;
 
-  background:
-    rgba(201,162,39,.10);
+  background:#C9A227;
+
+  color:#fff;
 
   font-size:20px;
 
   margin-bottom:8px;
 }
 
+
+/* SERVICE TITLE */
+
 .service h3{
-  color:#102A43;
+  color:#fff;
 
   font-size:14px;
 
   margin-bottom:3px;
 }
 
+
+/* SERVICE DESCRIPTION */
+
 .service p{
-  color:#667085;
+  color:#F1F5F9;
 
   font-size:10px;
 
@@ -380,7 +472,9 @@ nav{
 }
 
 
-/* ================= STATS ================= */
+/* ================================================= */
+/* STATS */
+/* ================================================= */
 
 .stats{
   display:grid;
@@ -420,7 +514,9 @@ nav{
 }
 
 
-/* ================= WHY ================= */
+/* ================================================= */
+/* WHY US */
+/* ================================================= */
 
 .why{
   padding:65px 0;
@@ -459,7 +555,9 @@ nav{
 }
 
 
+/* ================================================= */
 /* FEATURES */
+/* ================================================= */
 
 .features{
   display:grid;
@@ -501,7 +599,9 @@ nav{
 }
 
 
-/* ================= RATING ================= */
+/* ================================================= */
+/* RATING */
+/* ================================================= */
 
 .rating{
   text-align:center;
@@ -524,7 +624,9 @@ nav{
 }
 
 
-/* ================= CTA ================= */
+/* ================================================= */
+/* CTA */
+/* ================================================= */
 
 .cta{
   text-align:center;
@@ -551,7 +653,9 @@ nav{
 }
 
 
-/* ================= FOOTER ================= */
+/* ================================================= */
+/* FOOTER */
+/* ================================================= */
 
 footer{
   padding:27px 10px;
@@ -647,7 +751,9 @@ footer strong{
 }
 
 
-/* ================= WHATSAPP ANIMATION ================= */
+/* ================================================= */
+/* WHATSAPP ANIMATION */
+/* ================================================= */
 
 @keyframes whatsappPulse{
 
@@ -888,8 +994,11 @@ footer strong{
 
   <div class="container nav-content">
 
+
     <div class="logo-text">
+
       مؤسسة <span>أثير</span>
+
     </div>
 
 
@@ -912,11 +1021,13 @@ footer strong{
 
     <div class="nav-actions">
 
+
       <a
         href="https://wa.me/966565079362"
         target="_blank"
         rel="noopener"
-        class="nav-whatsapp">
+        class="nav-whatsapp"
+        onclick="trackContact('Contact - WhatsApp')">
 
         واتساب
 
@@ -925,11 +1036,13 @@ footer strong{
 
       <a
         href="tel:+966565079362"
-        class="nav-call">
+        class="nav-call"
+        onclick="trackContact('Contact - Call')">
 
         اتصال
 
       </a>
+
 
     </div>
 
@@ -948,7 +1061,7 @@ footer strong{
 <div class="hero-content">
 
 
-  <!-- ================= LOGO ================= -->
+  <!-- LOGO -->
 
   <div class="hero-logo">
 
@@ -956,6 +1069,7 @@ footer strong{
       viewBox="0 0 200 200"
       xmlns="http://www.w3.org/2000/svg"
       aria-label="شعار أثير">
+
 
       <circle
         cx="100"
@@ -972,8 +1086,6 @@ footer strong{
         stroke="#C9A227"
         stroke-width="4"/>
 
-
-      <!-- HOUSE -->
 
       <path
         d="M55 96 L100 57 L145 96"
@@ -999,8 +1111,6 @@ footer strong{
         stroke-width="6"/>
 
 
-      <!-- NAME -->
-
       <text
         x="100"
         y="160"
@@ -1020,23 +1130,16 @@ footer strong{
 
 
 
-  <!-- ================================================= -->
   <!-- OFFER -->
-  <!-- ================================================= -->
 
   <div class="offer-box">
 
     <div class="offer-title">
-
       عروض خاصة لا تفوتك!
-
     </div>
 
-
     <div class="offer-subtitle">
-
       عروض مميزة على جميع الخدمات
-
     </div>
 
   </div>
@@ -1054,9 +1157,7 @@ footer strong{
 
 
 
-  <!-- ================================================= -->
   <!-- CONTACT BUTTONS -->
-  <!-- ================================================= -->
 
   <div class="hero-buttons">
 
@@ -1065,7 +1166,8 @@ footer strong{
       href="https://wa.me/966565079362"
       target="_blank"
       rel="noopener"
-      class="btn btn-whatsapp">
+      class="btn btn-whatsapp"
+      onclick="trackContact('Contact - WhatsApp')">
 
       💬 تواصل عبر واتساب
 
@@ -1074,7 +1176,8 @@ footer strong{
 
     <a
       href="tel:+966565079362"
-      class="btn btn-call">
+      class="btn btn-call"
+      onclick="trackContact('Contact - Call')">
 
       📞 اتصل الآن
 
@@ -1099,11 +1202,9 @@ footer strong{
         خدماتنا
       </span>
 
-
       <h2>
         كل ما يحتاجه منزلك
       </h2>
-
 
       <p>
         خدمات منزلية متكاملة بأيدي فريق متخصص
@@ -1116,7 +1217,7 @@ footer strong{
     <div class="service-grid">
 
 
-      <!-- SERVICE 1 -->
+      <!-- 1 -->
 
       <div class="service">
 
@@ -1136,7 +1237,7 @@ footer strong{
 
 
 
-      <!-- SERVICE 2 -->
+      <!-- 2 -->
 
       <div class="service">
 
@@ -1156,7 +1257,7 @@ footer strong{
 
 
 
-      <!-- SERVICE 3 -->
+      <!-- 3 -->
 
       <div class="service">
 
@@ -1176,7 +1277,7 @@ footer strong{
 
 
 
-      <!-- SERVICE 4 -->
+      <!-- 4 -->
 
       <div class="service">
 
@@ -1196,7 +1297,7 @@ footer strong{
 
 
 
-      <!-- SERVICE 5 -->
+      <!-- 5 -->
 
       <div class="service">
 
@@ -1216,7 +1317,7 @@ footer strong{
 
 
 
-      <!-- SERVICE 6 -->
+      <!-- 6 -->
 
       <div class="service">
 
@@ -1241,9 +1342,7 @@ footer strong{
 
 
 
-  <!-- ================================================= -->
   <!-- STATS -->
-  <!-- ================================================= -->
 
   <div class="stats">
 
@@ -1289,6 +1388,7 @@ footer strong{
 
   </div>
 
+
 </div>
 
 </header>
@@ -1313,11 +1413,9 @@ footer strong{
       لماذا أثير؟
     </span>
 
-
     <h2>
       جودة تستحق ثقتك
     </h2>
-
 
     <p>
       نهتم بأدق التفاصيل لنقدم لك تجربة
@@ -1457,7 +1555,8 @@ footer strong{
       href="https://wa.me/966565079362"
       target="_blank"
       rel="noopener"
-      class="btn btn-whatsapp">
+      class="btn btn-whatsapp"
+      onclick="trackContact('Contact - WhatsApp')">
 
       💬 واتساب
 
@@ -1466,7 +1565,8 @@ footer strong{
 
     <a
       href="tel:+966565079362"
-      class="btn btn-call">
+      class="btn btn-call"
+      onclick="trackContact('Contact - Call')">
 
       📞 اتصل الآن
 
@@ -1508,7 +1608,8 @@ footer strong{
   target="_blank"
   rel="noopener"
   class="floating-whatsapp"
-  aria-label="واتساب">
+  aria-label="واتساب"
+  onclick="trackContact('Contact - Floating WhatsApp')">
 
 
   <svg
@@ -1552,7 +1653,8 @@ footer strong{
 <a
   href="tel:+966565079362"
   class="floating-call"
-  aria-label="اتصال">
+  aria-label="اتصال"
+  onclick="trackContact('Contact - Floating Call')">
 
 
   <svg
@@ -1573,6 +1675,34 @@ footer strong{
   </svg>
 
 </a>
+
+
+
+<!-- ================================================= -->
+<!-- TIKTOK EVENTS -->
+<!-- ================================================= -->
+
+<script>
+
+function trackContact(eventName){
+
+  if(
+    typeof ttq !== "undefined" &&
+    typeof ttq.track === "function"
+  ){
+
+    ttq.track(
+      'Contact',
+      {
+        content_name:eventName
+      }
+    );
+
+  }
+
+}
+
+</script>
 
 
 </body>
