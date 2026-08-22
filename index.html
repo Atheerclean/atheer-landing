@@ -77,10 +77,8 @@ rel="stylesheet">
     e.parentNode.insertBefore(n,e);
   };
 
-  /* Pixel ID */
   ttq.load('DA4HAEJC77UES973R9P0');
 
-  /* Page View */
   ttq.page();
 
 }(window, document, 'ttq');
@@ -243,26 +241,55 @@ nav{
 
   border-radius:14px;
 
-  background:#102A43;
+  background:#C9A227;
 
-  border:1px solid #C9A227;
+  border:1px solid #A98618;
 
   box-shadow:
-    0 7px 22px rgba(16,42,67,.15);
+    0 7px 22px rgba(201,162,39,.25);
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
 }
 
 .offer-title{
-  color:#C9A227;
+  color:#111;
+
   font-size:21px;
+
   font-weight:800;
+
   line-height:1.5;
 }
 
 .offer-subtitle{
-  color:#fff;
+  color:#111;
+
   font-size:14px;
+
   font-weight:700;
+
   margin-top:2px;
+}
+
+.offer-stars{
+  color:#fff;
+
+  font-size:18px;
+
+  font-weight:800;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:18px;
+
+  margin-bottom:1px;
 }
 
 
@@ -311,6 +338,8 @@ nav{
   justify-content:center;
 
   transition:.25s;
+
+  gap:8px;
 }
 
 .btn:hover{
@@ -319,6 +348,7 @@ nav{
 
 .btn-whatsapp{
   background:#25D366;
+
   color:#fff;
 
   box-shadow:
@@ -327,10 +357,21 @@ nav{
 
 .btn-call{
   background:#E53935;
+
   color:#fff;
 
   box-shadow:
     0 7px 18px rgba(229,57,53,.18);
+}
+
+
+/* ================= WHATSAPP ICON ================= */
+
+.whatsapp-icon{
+  width:20px;
+  height:20px;
+
+  display:block;
 }
 
 
@@ -346,12 +387,15 @@ nav{
 
 .services-title span{
   color:#C9A227;
+
   font-size:13px;
+
   font-weight:800;
 }
 
 .services-title h2{
   font-size:25px;
+
   color:#102A43;
 }
 
@@ -415,11 +459,13 @@ nav{
 
 .service-icon{
   width:auto;
+
   height:auto;
 
   display:flex;
 
   align-items:center;
+
   justify-content:center;
 
   background:transparent;
@@ -448,11 +494,41 @@ nav{
   margin:0;
 }
 
-
-/* إزالة وصف الخدمات */
-
 .service p{
   display:none;
+}
+
+
+/* ================= ACHIEVEMENTS ================= */
+
+.achievements-title{
+  margin-top:28px;
+
+  margin-bottom:12px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:8px;
+}
+
+.achievements-title .achievement-icon{
+  color:#C9A227;
+
+  font-size:22px;
+
+  line-height:1;
+}
+
+.achievements-title h2{
+  color:#102A43;
+
+  font-size:22px;
+
+  font-weight:800;
 }
 
 
@@ -466,17 +542,20 @@ nav{
 
   gap:10px;
 
-  margin-top:25px;
+  margin-top:10px;
 }
 
 .stat{
-  background:#fff;
+  background:#102A43;
 
-  border:1px solid #e8e8e8;
+  border:1px solid #C9A227;
 
   border-radius:12px;
 
   padding:14px;
+
+  box-shadow:
+    0 5px 15px rgba(16,42,67,.12);
 }
 
 .stat strong{
@@ -490,9 +569,11 @@ nav{
 }
 
 .stat span{
-  color:#667085;
+  color:#fff;
 
   font-size:11px;
+
+  font-weight:600;
 }
 
 
@@ -549,13 +630,17 @@ nav{
 .feature{
   text-align:center;
 
-  background:#fff;
+  background:rgba(125,211,252,.22);
 
-  border:1px solid #e8e8e8;
+  border:1px solid rgba(14,116,144,.18);
 
   border-radius:13px;
 
   padding:22px 12px;
+
+  backdrop-filter:blur(4px);
+
+  -webkit-backdrop-filter:blur(4px);
 }
 
 .feature-icon{
@@ -568,6 +653,8 @@ nav{
   font-size:15px;
 
   margin:4px 0;
+
+  color:#102A43;
 }
 
 .feature p{
@@ -627,6 +714,27 @@ nav{
 }
 
 
+/* ================= CTA WHATSAPP ================= */
+
+.cta .btn-whatsapp{
+  background:#25D366;
+
+  color:#fff;
+}
+
+
+/* ================= CTA CALL ================= */
+
+.cta .btn-call{
+  background:#C9A227;
+
+  color:#111;
+
+  box-shadow:
+    0 7px 18px rgba(201,162,39,.25);
+}
+
+
 /* ================= FOOTER ================= */
 
 footer{
@@ -651,6 +759,7 @@ footer strong{
   position:fixed;
 
   left:16px;
+
   right:auto;
 
   bottom:90px;
@@ -658,11 +767,13 @@ footer strong{
   z-index:9999;
 
   width:56px;
+
   height:56px;
 
   display:flex;
 
   align-items:center;
+
   justify-content:center;
 
   background:#25D366;
@@ -678,6 +789,7 @@ footer strong{
 
 .floating-whatsapp svg{
   width:32px;
+
   height:32px;
 }
 
@@ -689,6 +801,7 @@ footer strong{
   position:fixed;
 
   left:16px;
+
   right:auto;
 
   bottom:155px;
@@ -696,6 +809,7 @@ footer strong{
   z-index:9999;
 
   width:52px;
+
   height:52px;
 
   border-radius:50%;
@@ -703,6 +817,7 @@ footer strong{
   display:flex;
 
   align-items:center;
+
   justify-content:center;
 
   background:#E53935;
@@ -715,6 +830,7 @@ footer strong{
 
 .floating-call svg{
   width:27px;
+
   height:27px;
 }
 
@@ -755,12 +871,8 @@ footer strong{
   }
 
   .stats{
-    grid-template-columns:1fr;
-
-    max-width:400px;
-
-    margin-left:auto;
-    margin-right:auto;
+    grid-template-columns:
+      repeat(3,1fr);
   }
 
 }
@@ -783,6 +895,7 @@ footer strong{
   .nav-whatsapp,
   .nav-call{
     padding:6px 8px;
+
     font-size:10px;
   }
 
@@ -798,6 +911,7 @@ footer strong{
 
   .hero-logo{
     width:88px;
+
     height:88px;
 
     margin-bottom:10px;
@@ -807,9 +921,15 @@ footer strong{
   /* OFFER */
 
   .offer-box{
-    padding:12px 12px;
+    padding:11px 12px;
 
     margin-bottom:17px;
+  }
+
+  .offer-stars{
+    font-size:16px;
+
+    gap:14px;
   }
 
   .offer-title{
@@ -881,10 +1001,63 @@ footer strong{
   }
 
 
+  /* ACHIEVEMENTS */
+
+  .achievements-title{
+    margin-top:25px;
+
+    margin-bottom:10px;
+  }
+
+  .achievements-title h2{
+    font-size:20px;
+  }
+
+  .achievements-title .achievement-icon{
+    font-size:20px;
+  }
+
+
+  /* STATS */
+
+  .stats{
+    grid-template-columns:
+      repeat(3,1fr);
+
+    gap:7px;
+
+    margin-top:10px;
+  }
+
+  .stat{
+    min-height:82px;
+
+    padding:10px 5px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+  }
+
+  .stat strong{
+    font-size:18px;
+  }
+
+  .stat span{
+    font-size:9px;
+
+    line-height:1.4;
+  }
+
+
   /* FEATURES */
 
   .feature{
     padding:17px 8px;
+
+    background:rgba(125,211,252,.22);
   }
 
   .feature h3{
@@ -893,6 +1066,26 @@ footer strong{
 
   .feature p{
     font-size:9px;
+  }
+
+
+  /* CTA */
+
+  .cta{
+    padding:55px 12px;
+  }
+
+  .cta h2{
+    font-size:26px;
+  }
+
+
+  /* WHATSAPP ICON */
+
+  .whatsapp-icon{
+    width:19px;
+
+    height:19px;
   }
 
 
@@ -905,11 +1098,13 @@ footer strong{
     bottom:70px;
 
     width:52px;
+
     height:52px;
   }
 
   .floating-whatsapp svg{
     width:30px;
+
     height:30px;
   }
 
@@ -923,11 +1118,13 @@ footer strong{
     bottom:130px;
 
     width:48px;
+
     height:48px;
   }
 
   .floating-call svg{
     width:25px;
+
     height:25px;
   }
 
@@ -978,7 +1175,6 @@ footer strong{
         واتساب
 
       </a>
-
 
       <a
         href="tel:+966565079362"
@@ -1065,9 +1261,15 @@ footer strong{
   </div>
 
 
-  <!-- OFFER -->
+  <!-- ================= OFFER ================= -->
 
   <div class="offer-box">
+
+    <div class="offer-stars">
+      <span>⭐</span>
+
+      <span>⭐</span>
+    </div>
 
     <div class="offer-title">
       عروض خاصة لا تفوتك!
@@ -1101,7 +1303,38 @@ footer strong{
       class="btn btn-whatsapp"
       onclick="trackWhatsApp(event,'Hero WhatsApp')">
 
-      💬 تواصل عبر واتساب
+      <svg
+        class="whatsapp-icon"
+        viewBox="0 0 32 32"
+        aria-hidden="true">
+
+        <path
+          fill="#fff"
+          d="M19.11 17.45c-.27-.14-1.6-.79-1.85-.88
+          -.25-.09-.43-.14-.61.14-.18.27-.7.88-.86
+          1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34
+          -.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.55
+          .12-.12.27-.32.41-.48.14-.16.18-.27.18-.45
+          .09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01
+          -.22-.53-.45-.46-.61-.46h-.52c-.18 0-.48.07-.73.34
+          -.25.27-.95.93-.95 2.27s.98 2.63 1.11 2.81
+          c.14.18 1.92 2.93 4.65 4.11.65.28 1.16.45 1.56.58
+          .66.21 1.26.18 1.73.11.53-.08 1.6-.65 1.83-1.28
+          .23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
+
+        <path
+          fill="#fff"
+          d="M16.01 3C8.83 3 3 8.83 3 16c0 2.29.6 4.44
+          1.66 6.3L3 29l6.88-1.61A12.94 12.94 0 0 0 16.01
+          29C23.18 29 29 23.17 29 16S23.18 3 16.01 3zm0
+          23.67c-2.07 0-4.09-.56-5.86-1.63l-.42-.25-4.08.96
+          .98-3.98-.27-.43A10.66 10.66 0 1 1 16.01 26.67z"/>
+
+      </svg>
+
+      <span>
+        تواصل عبر واتساب
+      </span>
 
     </a>
 
@@ -1123,7 +1356,6 @@ footer strong{
   <div
     class="hero-services"
     id="services">
-
 
     <div class="services-title">
 
@@ -1221,55 +1453,73 @@ footer strong{
 
     </div>
 
+
+    <!-- ================= ACHIEVEMENTS ================= -->
+
+    <div class="achievements-title">
+
+      <span class="achievement-icon">
+        ✦
+      </span>
+
+      <h2>
+        إنجازاتنا
+      </h2>
+
+      <span class="achievement-icon">
+        ✦
+      </span>
+
+    </div>
+
+
+    <!-- ================= STATS ================= -->
+
+    <div class="stats">
+
+
+      <div class="stat">
+
+        <strong>
+          24/7
+        </strong>
+
+        <span>
+          جاهزون لخدمتكم
+        </span>
+
+      </div>
+
+
+      <div class="stat">
+
+        <strong>
+          ✓
+        </strong>
+
+        <span>
+          خدمة سريعة وموثوقة
+        </span>
+
+      </div>
+
+
+      <div class="stat">
+
+        <strong>
+          ⭐ 5
+        </strong>
+
+        <span>
+          خدمة احترافية
+        </span>
+
+      </div>
+
+
+    </div>
+
   </div>
-
-
-  <!-- ================= STATS ================= -->
-
-  <div class="stats">
-
-
-    <div class="stat">
-
-      <strong>
-        24/7
-      </strong>
-
-      <span>
-        جاهزون لخدمتكم
-      </span>
-
-    </div>
-
-
-    <div class="stat">
-
-      <strong>
-        ✓
-      </strong>
-
-      <span>
-        خدمة سريعة وموثوقة
-      </span>
-
-    </div>
-
-
-    <div class="stat">
-
-      <strong>
-        ⭐ 5
-      </strong>
-
-      <span>
-        خدمة احترافية
-      </span>
-
-    </div>
-
-
-  </div>
-
 
 </div>
 
@@ -1415,6 +1665,8 @@ footer strong{
   <div class="hero-buttons">
 
 
+    <!-- WHATSAPP -->
+
     <a
       href="https://wa.me/966565079362"
       target="_blank"
@@ -1422,10 +1674,43 @@ footer strong{
       class="btn btn-whatsapp"
       onclick="trackWhatsApp(event,'CTA WhatsApp')">
 
-      💬 واتساب
+      <svg
+        class="whatsapp-icon"
+        viewBox="0 0 32 32"
+        aria-hidden="true">
+
+        <path
+          fill="#fff"
+          d="M19.11 17.45c-.27-.14-1.6-.79-1.85-.88
+          -.25-.09-.43-.14-.61.14-.18.27-.7.88-.86
+          1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34
+          -.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.55
+          .12-.12.27-.32.41-.48.14-.16.18-.27.18-.45
+          .09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01
+          -.22-.53-.45-.46-.61-.46h-.52c-.18 0-.48.07-.73.34
+          -.25.27-.95.93-.95 2.27s.98 2.63 1.11 2.81
+          c.14.18 1.92 2.93 4.65 4.11.65.28 1.16.45 1.56.58
+          .66.21 1.26.18 1.73.11.53-.08 1.6-.65 1.83-1.28
+          .23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
+
+        <path
+          fill="#fff"
+          d="M16.01 3C8.83 3 3 8.83 3 16c0 2.29.6 4.44
+          1.66 6.3L3 29l6.88-1.61A12.94 12.94 0 0 0 16.01
+          29C23.18 29 29 23.17 29 16S23.18 3 16.01 3zm0
+          23.67c-2.07 0-4.09-.56-5.86-1.63l-.42-.25-4.08.96
+          .98-3.98-.27-.43A10.66 10.66 0 1 1 16.01 26.67z"/>
+
+      </svg>
+
+      <span>
+        واتساب
+      </span>
 
     </a>
 
+
+    <!-- CALL -->
 
     <a
       href="tel:+966565079362"
@@ -1448,7 +1733,7 @@ footer strong{
 
 <footer>
 
-  © 2026
+  ©️ 2026
 
   <strong>
     مؤسسة أثير للخدمات المنزلية
@@ -1531,142 +1816,102 @@ footer strong{
 
 <script>
 
-/*
-====================================================
-TikTok Events
-====================================================
-*/
+/* ==================================================
+   TikTok Pixel Event Helper
+================================================== */
 
-function sendTikTokEvent(eventName, contentName){
+function sendTikTokEvent(eventName, properties = {}) {
 
-  try{
+    try {
 
-    if(
-      typeof ttq !== "undefined" &&
-      typeof ttq.track === "function"
-    ){
+        if (
+            typeof ttq !== "undefined" &&
+            typeof ttq.track === "function"
+        ) {
 
-      ttq.track(
-        eventName,
-        {
-          content_name: contentName,
-          content_type: "lead"
+            ttq.track(eventName, properties);
+
+            return true;
         }
-      );
 
-      return true;
+    } catch (error) {
+
+        console.log("TikTok Pixel Error:", error);
 
     }
 
-  }catch(error){
-
-    console.log("TikTok Pixel Error:", error);
-
-  }
-
-  return false;
-
+    return false;
 }
 
 
-/*
-====================================================
-ViewContent
-يتم إرساله بعد تحميل الصفحة
-====================================================
-*/
+/* ==================================================
+   ViewContent
+================================================== */
 
-window.addEventListener("load", function(){
+window.addEventListener("load", function () {
 
-  setTimeout(function(){
+    setTimeout(function () {
 
-    sendTikTokEvent(
-      "ViewContent",
-      "Ather Home Services Landing Page"
-    );
+        sendTikTokEvent("ViewContent", {
 
-  }, 500);
+            content_name: "Ather Home Services"
+
+        });
+
+    }, 500);
 
 });
 
 
-/*
-====================================================
-WhatsApp
-====================================================
-*/
+/* ==================================================
+   WhatsApp
+================================================== */
 
-function trackWhatsApp(event, buttonName){
+function trackWhatsApp(event, buttonName) {
 
-  if(event){
-    event.preventDefault();
-  }
+    /*
+      نرسل Lead فقط.
+      لا نستخدم preventDefault.
+      واتساب يفتح مباشرة بدون تأخير.
+    */
 
-  sendTikTokEvent(
-    "Contact",
-    buttonName
-  );
+    sendTikTokEvent("Lead", {
 
-  var link = event ? event.currentTarget : null;
+        content_name: buttonName,
 
-  setTimeout(function(){
+        contact_method: "WhatsApp",
 
-    if(link){
+        content_type: "contact"
 
-      if(link.target === "_blank"){
-
-        window.open(
-          link.href,
-          "_blank",
-          "noopener"
-        );
-
-      }else{
-
-        window.location.href = link.href;
-
-      }
-
-    }
-
-  }, 300);
+    });
 
 }
 
 
-/*
-====================================================
-Call
-====================================================
-*/
+/* ==================================================
+   Phone Call
+================================================== */
 
-function trackCall(event, buttonName){
+function trackCall(event, buttonName) {
 
-  if(event){
-    event.preventDefault();
-  }
+    /*
+      نرسل Lead فقط.
+      الاتصال يفتح مباشرة.
+    */
 
-  sendTikTokEvent(
-    "Contact",
-    buttonName
-  );
+    sendTikTokEvent("Lead", {
 
-  var link = event ? event.currentTarget : null;
+        content_name: buttonName,
 
-  setTimeout(function(){
+        contact_method: "Phone",
 
-    if(link){
+        content_type: "contact"
 
-      window.location.href = link.href;
-
-    }
-
-  }, 300);
+    });
 
 }
 
 </script>
-
 
 </body>
 </html>
