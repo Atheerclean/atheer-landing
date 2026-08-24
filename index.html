@@ -98,7 +98,7 @@ body{
   background:#fff;
   color:#102A43;
   direction:rtl;
-  line-height:1.7;
+  line-height:1.8;
 }
 
 a{
@@ -149,7 +149,7 @@ nav{
 }
 
 .nav-links a{
-  font-size:13px;
+  font-size:14px;
   font-weight:600;
   color:#102A43;
 }
@@ -162,9 +162,9 @@ nav{
 .nav-whatsapp,
 .nav-call{
   color:#fff!important;
-  padding:7px 12px;
-  border-radius:8px;
-  font-size:12px;
+  padding:9px 14px;
+  border-radius:9px;
+  font-size:14px;
   font-weight:800;
 }
 
@@ -221,25 +221,25 @@ nav{
 /* ================= OFFER ================= */
 
 .offer-box{
-  max-width:600px;
+  max-width:680px;
   margin:0 auto 20px;
-  padding:14px 20px;
+  padding:18px 24px;
   border-radius:14px;
-  background:#C9A227;
-  border:1px solid #A88416;
+  background:#D8B84C;
+  border:1px solid #B8942E;
   box-shadow:0 7px 22px rgba(201,162,39,.25);
 }
 
 .offer-title{
   color:#111;
-  font-size:16px;
+  font-size:18px;
   font-weight:800;
   line-height:1.4;
 }
 
 .offer-subtitle{
   color:#111;
-  font-size:23px;
+  font-size:26px;
   font-weight:800;
   line-height:1.45;
   margin-top:1px;
@@ -251,7 +251,7 @@ nav{
   max-width:650px;
   margin:0 auto;
   color:#667085;
-  font-size:15px;
+  font-size:16px;
 }
 
 /* ================= BUTTONS ================= */
@@ -265,10 +265,10 @@ nav{
 }
 
 .btn{
-  flex:0 1 210px;
-  padding:13px 18px;
+  flex:0 1 230px;
+  padding:15px 20px;
   border-radius:9px;
-  font-size:14px;
+  font-size:16px;
   font-weight:800;
   display:flex;
   align-items:center;
@@ -357,7 +357,7 @@ nav{
 
 .service h3{
   color:#102A43;
-  font-size:11px;
+  font-size:13px;
   font-weight:700;
   line-height:1.5;
   margin:0;
@@ -409,7 +409,7 @@ nav{
 
 .stat span{
   color:#fff;
-  font-size:11px;
+  font-size:12px;
   font-weight:600;
 }
 
@@ -472,7 +472,7 @@ nav{
 
 .feature p{
   color:#667085;
-  font-size:11px;
+  font-size:12px;
 }
 
 /* ================= RATING ================= */
@@ -490,7 +490,7 @@ nav{
 
 .rating-text{
   color:#667085;
-  font-size:11px;
+  font-size:12px;
 }
 
 /* ================= CTA ================= */
@@ -534,8 +534,59 @@ nav{
 }
 
 .whatsapp-button-content svg{
-  width:21px;
-  height:21px;
+  width:24px;
+  height:24px;
+}
+
+
+/* ================= CONTACT SECTION ================= */
+.contact-section{
+  padding:42px 15px 38px;
+  text-align:center;
+  background:#fff;
+}
+.contact-title{
+  color:#102A43;
+  font-size:27px;
+  font-weight:800;
+  line-height:1.4;
+  margin-bottom:5px;
+}
+.contact-number{
+  color:#C9A227;
+  font-size:24px;
+  font-weight:800;
+  direction:ltr;
+  letter-spacing:1px;
+}
+
+/* ================= FLOATING BUTTONS GLOW ================= */
+.floating-whatsapp{
+  width:52px;
+  height:52px;
+  animation:whatsappGlow 1.8s ease-in-out infinite;
+}
+.floating-call{
+  width:48px;
+  height:48px;
+  animation:callGlow 1.8s ease-in-out infinite;
+}
+@keyframes whatsappGlow{
+  0%,100%{box-shadow:0 5px 16px rgba(0,0,0,.20),0 0 0 rgba(37,211,102,0)}
+  50%{box-shadow:0 5px 18px rgba(0,0,0,.22),0 0 18px rgba(37,211,102,.65)}
+}
+@keyframes callGlow{
+  0%,100%{box-shadow:0 5px 15px rgba(0,0,0,.20),0 0 0 rgba(229,57,53,0)}
+  50%{box-shadow:0 5px 17px rgba(0,0,0,.22),0 0 16px rgba(229,57,53,.60)}
+}
+@media(max-width:550px){
+  .contact-section{padding:35px 12px 32px}
+  .contact-title{font-size:25px}
+  .contact-number{font-size:22px}
+  .floating-whatsapp{width:50px;height:50px}
+  .floating-call{width:46px;height:46px}
+  .floating-whatsapp svg{width:28px;height:28px}
+  .floating-call svg{width:23px;height:23px}
 }
 
 /* ================= FOOTER ================= */
@@ -544,7 +595,7 @@ footer{
   padding:27px 10px;
   text-align:center;
   color:#667085;
-  font-size:12px;
+  font-size:13px;
 }
 
 footer strong{
@@ -559,8 +610,8 @@ footer strong{
   right:auto;
   bottom:90px;
   z-index:9999;
-  width:56px;
-  height:56px;
+  width:60px;
+  height:60px;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -571,8 +622,8 @@ footer strong{
 }
 
 .floating-whatsapp svg{
-  width:32px;
-  height:32px;
+  width:34px;
+  height:34px;
 }
 
 /* ================= FLOATING CALL ================= */
@@ -583,8 +634,8 @@ footer strong{
   right:auto;
   bottom:155px;
   z-index:9999;
-  width:52px;
-  height:52px;
+  width:56px;
+  height:56px;
   border-radius:50%;
   display:flex;
   align-items:center;
@@ -595,8 +646,8 @@ footer strong{
 }
 
 .floating-call svg{
-  width:27px;
-  height:27px;
+  width:29px;
+  height:29px;
 }
 
 /* ================= WHATSAPP ANIMATION ================= */
@@ -646,13 +697,13 @@ footer strong{
   }
 
   .logo-text{
-    font-size:17px;
+    font-size:19px;
   }
 
   .nav-whatsapp,
   .nav-call{
-    padding:6px 8px;
-    font-size:10px;
+    padding:8px 10px;
+    font-size:12px;
   }
 
   /* HERO */
@@ -685,17 +736,17 @@ footer strong{
   }
 
   .offer-title{
-    font-size:13px;
+    font-size:15px;
   }
 
   .offer-subtitle{
-    font-size:18px;
+    font-size:21px;
   }
 
   /* DESCRIPTION */
 
   .hero p{
-    font-size:13px;
+    font-size:15px;
     padding:0 10px;
   }
 
@@ -709,8 +760,8 @@ footer strong{
   .btn{
     flex:1;
     min-width:0;
-    padding:11px 7px;
-    font-size:12px;
+    padding:16px 10px;
+    font-size:15px;
   }
 
   /* SERVICES */
@@ -721,7 +772,7 @@ footer strong{
   }
 
   .services-title h2{
-    font-size:22px;
+    font-size:24px;
   }
 
   .service-grid{
@@ -730,7 +781,7 @@ footer strong{
   }
 
   .service{
-    min-height:115px;
+    min-height:125px;
     padding:12px 4px;
     border-radius:10px;
   }
@@ -741,18 +792,18 @@ footer strong{
   }
 
   .service h3{
-    font-size:10px;
+    font-size:12px;
   }
 
   /* ACHIEVEMENTS */
 
   .achievements-title{
-    font-size:17px;
+    font-size:19px;
     margin-top:25px;
   }
 
   .achievements-title span{
-    font-size:19px;
+    font-size:21px;
   }
 
   /* STATS */
@@ -772,11 +823,11 @@ footer strong{
   }
 
   .stat strong{
-    font-size:18px;
+    font-size:20px;
   }
 
   .stat span{
-    font-size:8px;
+    font-size:10px;
     line-height:1.4;
   }
 
@@ -787,11 +838,37 @@ footer strong{
   }
 
   .feature h3{
-    font-size:13px;
+    font-size:14px;
   }
 
   .feature p{
-    font-size:9px;
+    font-size:11px;
+  }
+
+  /* TEXT CLARITY */
+
+  .section-title span{
+    font-size:15px;
+  }
+
+  .section-title h2{
+    font-size:26px;
+  }
+
+  .section-title p{
+    font-size:14px;
+  }
+
+  .cta h2{
+    font-size:27px;
+  }
+
+  .cta p{
+    font-size:14px;
+  }
+
+  footer{
+    font-size:14px;
   }
 
   /* FLOATING WHATSAPP */
@@ -799,13 +876,13 @@ footer strong{
   .floating-whatsapp{
     left:12px;
     bottom:70px;
-    width:52px;
-    height:52px;
+    width:56px;
+    height:56px;
   }
 
   .floating-whatsapp svg{
-    width:30px;
-    height:30px;
+    width:32px;
+    height:32px;
   }
 
   /* FLOATING CALL */
@@ -813,17 +890,273 @@ footer strong{
   .floating-call{
     left:12px;
     bottom:130px;
-    width:48px;
-    height:48px;
+    width:52px;
+    height:52px;
   }
 
   .floating-call svg{
-    width:25px;
-    height:25px;
+    width:27px;
+    height:27px;
   }
 }
 
+
+
+/* ================= FINAL TEXT & FLOATING BUTTON ADJUSTMENTS ================= */
+
+/* رفع مستوى الأزرار العائمة */
+.floating-whatsapp{
+  bottom:115px;
+}
+
+.floating-call{
+  bottom:180px;
+}
+
+/* تكبير بسيط وواضح للكتابة في كامل الموقع */
+.nav-links a{font-size:15px;}
+.nav-whatsapp,.nav-call{font-size:15px;}
+.logo-text{font-size:21px;}
+.offer-title{font-size:19px;}
+.offer-subtitle{font-size:27px;}
+.hero p{font-size:17px;}
+.btn{font-size:17px; padding:16px 21px;}
+.services-title span{font-size:14px;}
+.services-title h2{font-size:27px;}
+.service h3{font-size:14px;}
+.achievements-title{font-size:20px;}
+.stat span{font-size:13px;}
+.section-title span{font-size:14px;}
+.section-title h2{font-size:31px;}
+.section-title p{font-size:14px;}
+.feature h3{font-size:16px;}
+.feature p{font-size:13px;}
+.rating-text{font-size:13px;}
+.cta h2{font-size:31px;}
+.cta p{font-size:14px;}
+footer{font-size:13px;}
+
+@media(max-width:550px){
+  .logo-text{font-size:20px;}
+  .nav-whatsapp,.nav-call{font-size:13px;}
+  .offer-title{font-size:16px;}
+  .offer-subtitle{font-size:22px;}
+  .hero p{font-size:16px;}
+  .btn{font-size:16px; padding:17px 11px;}
+  .services-title span{font-size:15px;}
+  .services-title h2{font-size:25px;}
+  .service h3{font-size:13px;}
+  .achievements-title{font-size:20px;}
+  .stat strong{font-size:21px;}
+  .stat span{font-size:11px;}
+  .section-title span{font-size:16px;}
+  .section-title h2{font-size:27px;}
+  .section-title p{font-size:15px;}
+  .feature h3{font-size:15px;}
+  .feature p{font-size:12px;}
+  .rating-text{font-size:13px;}
+  .cta h2{font-size:29px;}
+  .cta p{font-size:15px;}
+  footer{font-size:15px;}
+
+  /* رفع الأزرار العائمة على الجوال */
+  .floating-whatsapp{
+    bottom:105px;
+  }
+
+  .floating-call{
+    bottom:165px;
+  }
+}
+
+
+/* ================= FINAL SIZE ADJUSTMENTS ================= */
+
+/* Larger, clearer typography across the site */
+body{font-size:17px;}
+.hero p{font-size:17px;}
+.services-title span{font-size:15px;}
+.services-title h2{font-size:28px;}
+.service h3{font-size:13px;}
+.achievements-title{font-size:21px;}
+.achievements-title span{font-size:24px;}
+.stat span{font-size:13px;}
+.stat strong{font-size:26px;}
+.section-title span{font-size:15px;}
+.section-title h2{font-size:33px;}
+.section-title p{font-size:15px;}
+.feature h3{font-size:17px;}
+.feature p{font-size:13px;}
+.rating-text{font-size:13px;}
+.cta h2{font-size:33px;}
+.cta p{font-size:15px;}
+footer{font-size:13px;}
+
+/* Raise floating buttons */
+.floating-whatsapp{bottom:125px;}
+.floating-call{bottom:190px;}
+
+@media(max-width:550px){
+  .hero p{font-size:15px;}
+  .services-title span{font-size:14px;}
+  .services-title h2{font-size:25px;}
+  .service h3{font-size:12px;}
+  .achievements-title{font-size:19px;}
+  .achievements-title span{font-size:22px;}
+  .stat strong{font-size:21px;}
+  .stat span{font-size:10px;}
+  .section-title span{font-size:14px;}
+  .section-title h2{font-size:28px;}
+  .section-title p{font-size:14px;}
+  .feature h3{font-size:15px;}
+  .feature p{font-size:11px;}
+  .rating-text{font-size:12px;}
+  .cta h2{font-size:28px;}
+  .cta p{font-size:14px;}
+  footer{font-size:12px;}
+  .floating-whatsapp{bottom:105px;}
+  .floating-call{bottom:165px;}
+}
+
 </style>
+
+<style id="final-size-position-overrides">
+/* ===== تكبير الخطوط بشكل واضح ===== */
+body{font-size:18px!important}
+.logo-text{font-size:23px!important}
+.nav-links a{font-size:15px!important}
+.nav-whatsapp,.nav-call{font-size:14px!important;padding:10px 16px!important}
+
+.offer-box{max-width:680px!important;padding:20px 26px!important}
+.offer-title{font-size:19px!important}
+.offer-subtitle{font-size:27px!important}
+
+.hero p{font-size:17px!important}
+.services-title span{font-size:15px!important}
+.services-title h2{font-size:29px!important}
+.service{min-height:145px!important;padding:18px 8px!important}
+.service-icon{font-size:32px!important}
+.service h3{font-size:14px!important}
+
+.achievements-title{font-size:22px!important}
+.achievements-title span{font-size:25px!important}
+.stat{padding:21px 12px!important}
+.stat strong{font-size:27px!important}
+.stat span{font-size:14px!important}
+
+.section-title span{font-size:15px!important}
+.section-title h2{font-size:34px!important}
+.section-title p{font-size:15px!important}
+.feature{padding:26px 14px!important}
+.feature-icon{font-size:31px!important}
+.feature h3{font-size:17px!important}
+.feature p{font-size:13px!important}
+.stars{font-size:25px!important}
+.rating-text{font-size:13px!important}
+
+.cta h2{font-size:34px!important}
+.cta p{font-size:16px!important}
+.btn{font-size:16px!important;padding:16px 22px!important;min-height:56px!important}
+.whatsapp-button-content svg{width:25px!important;height:25px!important}
+footer{font-size:14px!important}
+
+/* ===== رفع الأزرار العائمة بوضوح ===== */
+.floating-whatsapp{bottom:155px!important}
+.floating-call{bottom:220px!important}
+
+@media(max-width:550px){
+  .logo-text{font-size:19px!important}
+  .nav-whatsapp,.nav-call{font-size:12px!important;padding:8px 10px!important}
+
+  .offer-box{max-width:100%!important;padding:18px 14px!important}
+  .offer-title{font-size:17px!important}
+  .offer-subtitle{font-size:23px!important}
+
+  .hero p{font-size:15px!important}
+  .services-title span{font-size:14px!important}
+  .services-title h2{font-size:26px!important}
+
+  .service{min-height:145px!important;padding:16px 5px!important}
+  .service-icon{font-size:29px!important}
+  .service h3{font-size:13px!important}
+
+  .achievements-title{font-size:20px!important}
+  .stat{min-height:96px!important;padding:16px 4px!important}
+  .stat strong{font-size:22px!important}
+  .stat span{font-size:11px!important}
+
+  .section-title span{font-size:14px!important}
+  .section-title h2{font-size:29px!important}
+  .section-title p{font-size:14px!important}
+  .feature{padding:21px 9px!important}
+  .feature h3{font-size:15px!important}
+  .feature p{font-size:11px!important}
+
+  .cta h2{font-size:29px!important}
+  .cta p{font-size:14px!important}
+  .btn{font-size:14px!important;padding:14px 12px!important;min-height:52px!important}
+
+  .floating-whatsapp{bottom:120px!important;width:56px!important;height:56px!important}
+  .floating-call{bottom:190px!important;width:52px!important;height:52px!important}
+}
+
+/* ================= FINAL DESIGN ADJUSTMENTS ================= */
+/* 1) Larger, clearer typography */
+body{font-size:18px;}
+.logo-text{font-size:22px;}
+.nav-links a{font-size:15px;}
+.nav-whatsapp,.nav-call{font-size:14px;}
+.offer-title{font-size:20px;}
+.offer-subtitle{font-size:29px;}
+.hero p{font-size:18px;}
+.btn{font-size:18px;padding:16px 22px;}
+.services-title span{font-size:15px;}
+.services-title h2{font-size:28px;}
+.service h3{font-size:14px;}
+.achievements-title{font-size:21px;}
+.stat strong{font-size:26px;}
+.stat span{font-size:13px;}
+.section-title span{font-size:15px;}
+.section-title h2{font-size:33px;}
+.section-title p{font-size:15px;}
+.feature h3{font-size:17px;}
+.feature p{font-size:13px;}
+.rating-text{font-size:13px;}
+.cta h2{font-size:33px;}
+.cta p{font-size:15px;}
+footer{font-size:14px;}
+/* 2) Bring floating buttons closer together */
+.floating-call{bottom:151px;}
+/* 3) Remove most of the empty space above the full-width logo */
+.hero{padding-top:72px;}
+
+@media(max-width:550px){
+  .hero{padding-top:64px;}
+  .logo-text{font-size:19px;}
+  .nav-whatsapp,.nav-call{font-size:12px;}
+  .offer-title{font-size:15px;}
+  .offer-subtitle{font-size:22px;}
+  .hero p{font-size:15px;}
+  .btn{font-size:15px;padding:14px 10px;}
+  .services-title span{font-size:14px;}
+  .services-title h2{font-size:24px;}
+  .service h3{font-size:12px;}
+  .achievements-title{font-size:19px;}
+  .stat strong{font-size:21px;}
+  .stat span{font-size:10px;}
+  .section-title span{font-size:14px;}
+  .section-title h2{font-size:27px;}
+  .section-title p{font-size:13px;}
+  .feature h3{font-size:15px;}
+  .feature p{font-size:11px;}
+  .rating-text{font-size:12px;}
+  .cta h2{font-size:28px;}
+  .cta p{font-size:14px;}
+  footer{font-size:12px;}
+  .floating-call{bottom:126px;}
+}
+</style>
+
 </head>
 
 <body>
@@ -931,7 +1264,16 @@ footer strong{
       class="btn btn-whatsapp"
       onclick="trackWhatsApp(event,'Hero WhatsApp')">
 
-      💬 تواصل عبر واتساب
+      <span class="whatsapp-button-content">
+
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <path fill="#fff" d="M19.11 17.45c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.18-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.46h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.98 2.63 1.11 2.81c.14.18 1.92 2.93 4.65 4.11.65.28 1.16.45 1.56.58.66.21 1.26.18 1.73.11.53-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
+          <path fill="#fff" d="M16.01 3C8.83 3 3 8.83 3 16c0 2.29.6 4.44 1.66 6.3L3 29l6.88-1.61A12.94 12.94 0 0 0 16.01 29C23.18 29 29 23.17 29 16S23.18 3 16.01 3zm0 23.67c-2.07 0-4.09-.56-5.86-1.63l-.42-.25-4.08.96.98-3.98-.27-.43A10.66 10.66 0 1 1 16.01 26.67z"/>
+        </svg>
+
+        واتساب
+
+      </span>
 
     </a>
 
@@ -1161,6 +1503,14 @@ footer strong{
 
 </div>
 
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact-section" id="contact-us">
+  <div class="container">
+    <div class="contact-title">تواصل معنا</div>
+    <div class="contact-number">0565079362</div>
+  </div>
 </section>
 
 <!-- ================= CTA ================= -->
